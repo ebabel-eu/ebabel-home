@@ -14,7 +14,12 @@ If there is no CNAME in the root directory of the gh-pages branch, the site is v
 
 If there is a CNAME and the DNS has been setup, the site is visible at the address mentioned in the CNAME file.
 
+## local
+
+The site can also be opened directly in a browser from its only index.html page.
+
 
 todo:
 
 * add a CNAME file to the root of gh-pages branch. Write only home.ebabel.eu in it.
+
