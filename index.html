@@ -68,12 +68,129 @@
                 color: #00b;
             }
 
+            .sideway {
+                /* Safari */
+                -webkit-transform: rotate(-90deg);
+
+                /* Firefox */
+                -moz-transform: rotate(-90deg);
+
+                /* IE */
+                -ms-transform: rotate(-90deg);
+
+                /* Opera */
+                -o-transform: rotate(-90deg);
+
+                /* Internet Explorer */
+                filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+            }
+
             .browserupgrade {
                 background-color: #ff0;
                 padding: 1em;
                 margin: 0 0 1em;
             }
 
+            header {
+                background-color: #330;
+                color: #ffc;
+                padding: 0 16px 16px;
+            }
+
+            header h1 {
+                font-size: 48px;
+                line-height: 1.5em;
+            }
+
+            header p {
+                font-size: 32px;
+                line-height: 1.5em;
+                text-align: right;
+            }
+
+            header strong {
+                font-weight: 600;
+            }
+
+            .big-links:before,
+            .big-links:after {
+                content: " ";
+                display: block;
+                clear: both;
+            }
+
+            .big-links article {
+                width: 320px;
+                height: 200px;
+                float: left;
+                display: inline-block;
+                margin: 16px 0 16px 16px;
+                background-color: #090;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .big-links img {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                margin-left: -50%;
+            }
+
+            .big-links .landscape {
+                height: 100%;
+            }
+
+            .big-links .portrait {
+                width: 100%;
+            }
+
+            .big-links h1 {
+                position: absolute;
+                top: 75px;
+                left: -75px;
+                font-size: 32px;
+                line-height: 50px;
+                background-color: #030;
+                color: #efe;
+                text-transform: uppercase;
+                width: 200px;
+                height: 50px;
+            }
+
+            .big-links p {
+                position: absolute;
+                top: 75px;
+                right: -75px;
+                font-size: 32px;
+                line-height: 50px;
+                background-color: #900;
+                color: #fee;
+                width: 200px;
+                height: 50px;
+            }
+
+            .big-links a {
+                background-color: rgba(155,100,100,.2);
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .big-links a:hover {
+                background-color: rgba(155,100,100,.1);
+            }
+
+            footer {
+                text-align: center;
+            }
+
+            .big-links .arabic {
+                direction: rtl;
+            }
 
         </style>
     </head>
@@ -82,10 +199,42 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <h1>h1 title</h1>
+        <header>
+            <h1>Hi, I'm <strong>Nadjib</strong></h1>
+            <p>I make <strong>apps</strong> and <strong>websites</strong> in Amsterdam.</p>
+        </header>
 
+        <section class="big-links">
+
+            <article>
+                <img class="landscape" src="http://www.forumdas.com/eklenti/sphynx-kediler-8-jpg.41902/">
+                <h1 class="sideway">title</h1>
+                <p class="sideway">text</p>
+                <a href="http://1.com"></a>
+            </article>
+
+            <article>
+                <img class="portrait" src="http://thumbs.dreamstime.com/x/de-kat-van-sphynx-8-maanden-oud-het-zitten-18989900.jpg">
+                <h1 class="sideway">title</h1>
+                <p class="sideway">text</p>
+                <a href="http://2.com"></a>
+            </article>
+
+            <article>
+                <img class="portrait" src="http://thumbs.dreamstime.com/x/de-kat-van-sphynx-8-maanden-oud-het-zitten-18989900.jpg">
+                <h1 lang="ar-lb" class="sideway arabic">نَخيب</h1>
+                <p class="sideway">text</p>
+                <a href="http://2.com"></a>
+            </article>
+
+        </section>
+
+        <footer>
+            <p><a href="LICENSE">MIT License</a>, feel free to <a href="https://github.com/ebabel-eu/ebabel-home">clone my code</a> repository</p>
+        </footer>
 
         <script>
+
         </script>
     </body>
 </html>
