@@ -30,11 +30,11 @@ module.exports = function (grunt) {
 
         eslint: {
             options: {
-                configFile: './lint/es-lint.json'    // Default rules: http://eslint.org/docs/rules/
+                configFile: "./lint/es-lint.json"    // Default rules: http://eslint.org/docs/rules/
             },
             target: [
-                './js/scripts/*.js',
-                './js/scripts/**/*.js'
+                "./js/scripts/*.js",
+                "./js/scripts/**/*.js"
             ]
         },
 
