@@ -1,6 +1,8 @@
 # eBabel home
 
-HTML only homepage to any project of mine. 
+HTML only homepage to any project of mine.
+
+[![wercker status](https://app.wercker.com/status/1d2bb48a0faefdfef38c6a82f93dcbdb/s "wercker status")](https://app.wercker.com/project/bykey/1d2bb48a0faefdfef38c6a82f93dcbdb)
 
 This is my gateway that's easy to edit with pure HTML, without any server side processing to allow maximum flexibility of creating unique designs and layouts.
 
