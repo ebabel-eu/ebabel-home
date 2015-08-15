@@ -1,0 +1,20 @@
+{
+  "name": "website-name",
+  "version": "1.0.0",
+  "authors": [
+    "eFocus <frontend@efocus.nl>"
+  ],
+  "description": "Description of this website",
+  "main": "Gruntfile.js",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "LicenseRef-LICENSE",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
