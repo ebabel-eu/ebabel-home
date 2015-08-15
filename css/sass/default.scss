@@ -7,19 +7,18 @@
 
 // Bootstrap.
 // Only include the relevant parts of Bootstrap, not everything, to prevent css from growing too large.
-
 // Core variables and mixins.
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables';
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
-
 // Reset and dependencies.
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/normalize';
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/print';
-
 // Core CSS
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding';
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/type';
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/grid';
+// Components.
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/thumbnails';
 
 // 2-layout.
 

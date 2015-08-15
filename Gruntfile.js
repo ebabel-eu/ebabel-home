@@ -44,6 +44,7 @@ module.exports = function (grunt) {
                 './css/sass/**/*.scss'
             ],
             options: {
+                config: './lint/scss-lint.yml',
                 colorizeOutput: true
             },
         },
