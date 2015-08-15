@@ -8,6 +8,7 @@ This is a single page that leads to other projects. It's not the start of a webs
 
 ## todo
 
+- Switch to continuous integration with Wercker and deployment to my machine for the ebabel.eu and www.ebabel.eu website. Remove gh-pages.
 - Add JSDoc once I start writing Javascript.
 
 ## Front-end
