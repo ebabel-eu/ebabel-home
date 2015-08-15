@@ -25,8 +25,9 @@ module.exports = function (grunt) {
                     // Third party javascript dependencies used in this website.
                     './js/dependencies.js' : [
                         // Libraries managed with Bower.
-                        
-                        // Note: update ./unit-tests/karma.conf.js when adding new non-ui dependencies.
+                        './bower_components/angular/angular.js'
+
+                        // If libraries can't be managed by Bower, add them here.
                     ],
                     
                     // All custom scripts written for this website.
@@ -179,5 +180,12 @@ module.exports = function (grunt) {
         'htmlangular',
         'cssmin',
         'uglify'
+    ]);
+
+    grunt.registerTask('sassy', [
+        'scsslint',
+        'sass',
+        'pleeease',
+        'cssmin'
     ]);
 };
