@@ -1,20 +1,23 @@
 {
-  "name": "website-name",
+  "name": "ebabel-home",
   "version": "1.0.0",
   "authors": [
-    "eFocus <frontend@efocus.nl>"
+    "Nadjib Amar <hello@ebabel.eu>"
   ],
-  "description": "Description of this website",
+  "description": "Homepage of all my projects and things that interest me.",
   "main": "Gruntfile.js",
   "moduleType": [
     "es6"
   ],
-  "license": "LicenseRef-LICENSE",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "jeet": "~6.1.2"
+  }
 }
