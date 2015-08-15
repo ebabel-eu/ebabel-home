@@ -1,0 +1,27 @@
+{
+  "name": "ebabel-home",
+  "version": "1.0.0",
+  "authors": [
+    "Nadjib Amar <hello@ebabel.eu>"
+  ],
+  "description": "Homepage of all my projects and things that interest me.",
+  "main": "Gruntfile.js",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "bourbon": "~4.2.3"
+  },
+  "dependencies": {
+    "angular": "~1.4.4"
+  }
+}
