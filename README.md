@@ -49,6 +49,26 @@ Deployment tasks are run as a one off and will both concatenate and minify files
 grunt
 ```
 
+## Run locally
+
+### local
+
+The site can also be run on localhost:
+
+```
+http-server
+```
+
+## Deployment on gh-pages
+
+### gh-pages hosting without CNAME
+
+If there is no CNAME in the root directory of the gh-pages branch, the site is visible at http://ebabel-eu.github.io/ebabel-home/
+
+### gh-pages hosting with CNAME
+
+If there is a CNAME and the DNS has been setup, the site is visible at the address mentioned in the CNAME file.
+
 ### Full installation for new machines
 
 #### NodeJS and npm
@@ -103,23 +123,3 @@ If you have never installed the Sass linting tool on your machine, run:
 ```
 gem install scss_lint
 ```
-
-## Run locally
-
-### local
-
-The site can also be run on localhost:
-
-```
-http-server
-```
-
-## Deployment on gh-pages
-
-### gh-pages hosting without CNAME
-
-If there is no CNAME in the root directory of the gh-pages branch, the site is visible at http://ebabel-eu.github.io/ebabel-home/
-
-### gh-pages hosting with CNAME
-
-If there is a CNAME and the DNS has been setup, the site is visible at the address mentioned in the CNAME file.

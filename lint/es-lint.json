@@ -4,8 +4,7 @@
         "node": false
     },
     "globals": {
-        "window": true,
-        "jQuery": true
+        "window": true
     },
     "rules": {
         "no-redeclare": [2, {"builtinGlobals": true}],
