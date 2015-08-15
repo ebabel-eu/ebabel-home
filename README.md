@@ -8,7 +8,6 @@ This is a single page that leads to other projects. It's not the start of a webs
 
 ## todo
 
-- Switch to continuous integration with Wercker and deployment to my machine for the ebabel.eu and www.ebabel.eu website. Remove gh-pages.
 - Add JSDoc once I start writing Javascript.
 
 ## Front-end
@@ -64,15 +63,10 @@ The site can also be run on localhost:
 http-server
 ```
 
-## Deployment on gh-pages
+## Deployment
 
-### gh-pages hosting without CNAME
+Any code pushed to master will be published via continuous integration.
 
-If there is no CNAME in the root directory of the gh-pages branch, the site is visible at http://ebabel-eu.github.io/ebabel-home/
-
-### gh-pages hosting with CNAME
-
-If there is a CNAME and the DNS has been setup, the site is visible at the address mentioned in the CNAME file.
 
 ### Full installation for new machines
 
