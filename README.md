@@ -104,7 +104,17 @@ If you have never installed the Sass linting tool on your machine, run:
 gem install scss_lint
 ```
 
-## Backend: Deployment on gh-pages
+## Run locally
+
+### local
+
+The site can also be run on localhost:
+
+```
+http-server
+```
+
+## Deployment on gh-pages
 
 ### gh-pages hosting without CNAME
 
@@ -113,7 +123,3 @@ If there is no CNAME in the root directory of the gh-pages branch, the site is v
 ### gh-pages hosting with CNAME
 
 If there is a CNAME and the DNS has been setup, the site is visible at the address mentioned in the CNAME file.
-
-### local
-
-The site can also be opened directly in a browser from its only index.html page.
