@@ -1,9 +1,15 @@
 // Setup.
-@import "../../bower_components/bourbon/dist/_bourbon.scss";
-@import "1-base/variables.scss";
+@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+
+// 1-base
+@import '1-base/variables';
 // note: mixins would go here, if there is any. One mixin per file in the mixins directory.
-@import "1-base/fonts.scss";
 
 // Bootstrap grid.
 // todo: only include the bits of Bootstrap that are used to reduce the overall size and complexity of css.
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+
+// 2-layout
+
+
+// 3-modules

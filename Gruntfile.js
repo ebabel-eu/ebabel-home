@@ -5,7 +5,16 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
 
-        // Concatenate the javascript files.
+        eslint: {
+            options: {
+                configFile: './lint/es-lint.json'    // Default rules: http://eslint.org/docs/rules/
+            },
+            target: [
+                './js/scripts/*.js',
+                './js/scripts/**/*.js'
+            ]
+        },
+
         concat: {
             options: {
                 separator: ';',
@@ -28,14 +37,14 @@ module.exports = function (grunt) {
             }
         },
 
-        eslint: {
+        scsslint: {
+            allFiles: [
+                './css/sass/default.scss',
+                './css/sass/**/*.scss'
+            ],
             options: {
-                configFile: './lint/es-lint.json'    // Default rules: http://eslint.org/docs/rules/
+                colorizeOutput: true
             },
-            target: [
-                './js/scripts/*.js',
-                './js/scripts/**/*.js'
-            ]
         },
 
         sass: {
@@ -62,6 +71,17 @@ module.exports = function (grunt) {
                 files: {
                     './css/default.css': './css/default.css'
                 }
+            }
+        },
+
+        htmlangular: {
+            options: {
+                reportpath: 'lint/html-angular-validate-report.json'
+            },
+            files: {
+                src: [
+                    './*.html'
+                ]
             }
         },
 
@@ -104,21 +124,32 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: [
+                    './lint/scss-lint.yml',
                     './css/**/*.scss'
                 ],
                 tasks: [
+                    'scsslint',
                     'sass',
                     'pleeease'
                 ]
             },
             scripts: {
                 files: [
+                    './lint/es-lint.json',
                     './js/scripts/*.js',
                     './js/scripts/**/*.js'
                 ],
                 tasks: [
-                    'concat',
-                    'eslint'
+                    'eslint',
+                    'concat'
+                ]
+            },
+            html: {
+                files: [
+                    'index.html'
+                ],
+                tasks: [
+                    'htmlangular'
                 ]
             },
             grunt: {
@@ -140,10 +171,12 @@ module.exports = function (grunt) {
     
     // Prior to release. One-off build for both css and javascript, including minification: run 'grunt' command.
     grunt.registerTask('default', [
-        'concat',
         'eslint',
+        'concat',
+        'scsslint',
         'sass',
         'pleeease',
+        'htmlangular',
         'cssmin',
         'uglify'
     ]);

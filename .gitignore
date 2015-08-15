@@ -6,3 +6,4 @@ node_modules
 *.map
 js/dependencies*.js
 js/scripts*.js
+html-angular-validate-report.json
