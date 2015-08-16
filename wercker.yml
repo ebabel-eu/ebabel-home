@@ -1,6 +1,6 @@
 box: node
 services:
-    - wercker/ruby
+    - ruby
 build:
   steps:
 
