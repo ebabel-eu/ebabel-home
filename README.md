@@ -67,8 +67,17 @@ node index.js
 
 ## Deployment
 
-Any code pushed to master will be published via continuous integration.
+Any code pushed to master will be published via continuous integration on Wercker.
 
+```
+git push origin master
+```
+
+However, code can also be pushed directly to a Heroku instance:
+
+```
+git push heroku master
+```
 
 ### Full installation for new machines
 
