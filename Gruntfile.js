@@ -160,9 +160,12 @@ module.exports = function (grunt) {
                     './Gruntfile.js'
                 ],
                 tasks: [
+                    'eslint',
                     'concat',
+                    'scsslint',
                     'sass',
-                    'pleeease'
+                    'pleeease',
+                    'htmlangular'
                 ]
             }
         }
