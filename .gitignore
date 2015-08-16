@@ -2,8 +2,4 @@
 bower_components
 node_modules
 .sass-cache
-*.css
-*.map
-js/dependencies*.js
-js/scripts*.js
 html-angular-validate-report.json
