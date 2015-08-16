@@ -15,7 +15,7 @@ build:
     # Install client side libraries.
     - script:
         name: install client side libraries
-        code: bower install
+        code: sudo bower install --allow-root
 
     - npm-install
 
