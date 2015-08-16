@@ -17,41 +17,8 @@ build:
 
 # Deploy to production
 deploy:
-    steps:
-        - add-to-known_hosts:
-            hostname: ebabel.eu
-        - mktemp:
-            envvar: PRIVATEKEY_PATH
-        - create-file:
-            name: write key
-            filename: $PRIVATEKEY_PATH
-            content: $EBABEL_ON_EC2_PRIVATE
-            overwrite: true
-            hide-from-log: true
-        - script:
-            name: compress and transfer application tar ball
-            code: |
-                tar cvzf /tmp/deploy.tar index.html robots.txt favicon.ico img/* js/*.min.* css/*.min.*
-                scp -i $PRIVATEKEY_PATH /tmp/deploy.tar ubuntu@ebabel.eu:/opt/temp/
-        # - script:
-        #     name: uncompress tar ball
-        #     code: ssh -i $PRIVATEKEY_PATH -l root ebabel.eu "cd /opt/temp && tar xvzf /opt/temp/deploy.tar && rm /opt/temp/deploy.tar"
-        # - script:
-        #     name: cleanup deployment directory and recreate it from scratch
-        #     code: ssh -i $PRIVATEKEY_PATH -l root ebabel.eu "rm -r /opt/ebabel && mkdir /opt/ebabel && mkdir /opt/ebabel/build && mkdir /opt/ebabel/node_modules"
-        # - script:
-        #     name: copy files to directory to publish from
-        #     code: ssh -i $PRIVATEKEY_PATH -l root ebabel.eu "cp /opt/temp/production.js /opt/ebabel/ && cp /opt/temp/package.json /opt/ebabel/ && cp -r /opt/temp/build/* /opt/ebabel/build/ && cp -r /opt/temp/node_modules/* /opt/ebabel/node_modules/"
-        # - script:
-        #     name: cleanup temp directory
-        #     code: ssh -i $PRIVATEKEY_PATH -l root ebabel.eu "rm -r /opt/temp/*"
-        # - script:
-        #     name: install forever to keep running node.js
-        #     code: ssh -i $PRIVATEKEY_PATH -l root ebabel.eu "sudo npm install forever -g"
-        # - script:
-        #     name: stop all running applications
-        #     code: ssh -i $PRIVATEKEY_PATH -l root ebabel.eu "forever stopall"
-        # - script:
-        #     name: start the application as a daemon process
-        #     code: ssh -i $PRIVATEKEY_PATH -l root ebabel.eu "forever start /opt/ebabel/production.js"
-
+  steps:
+    - heroku-deploy:
+        key: $HEROKU_KEY
+        user: $HEROKU_USER
+        app-name: $HEROKU_APP_NAME
