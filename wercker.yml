@@ -27,6 +27,7 @@ deploy:
             filename: $PRIVATEKEY_PATH
             content: $EBABEL_ON_EC2_PRIVATE
             overwrite: true
+            hide-from-log: true
         - script:
             name: compress and transfer application tar ball
             code: |
