@@ -2,6 +2,9 @@ box: node
 build:
   steps:
 
+    # Install Ruby.
+    - bundle-install
+
     # Install grunt.
     - script:
         name: install grunt
