@@ -184,4 +184,14 @@ module.exports = function (grunt) {
         'pleeease',
         'cssmin'
     ]);
+
+    // Tasks dedicated to wercker build and deployment process.
+    grunt.registerTask('wercker', [
+        'eslint'
+    ]);
 };
+
+
+
+
+
