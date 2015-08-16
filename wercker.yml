@@ -1,16 +1,21 @@
 box: node
-services:
-    - ruby
 build:
   steps:
 
-    - script:
-        name: install sass
-        code: sudo gem install sass
-
+    # Install grunt.
     - script:
         name: install grunt
         code: sudo npm install -g grunt-cli
+
+    # Install bower.
+    - script:
+        name: install bower
+        code: sudo npm install -g bower
+
+    # Install client side libraries.
+    - script:
+        name: install client side libraries
+        code: bower install
 
     - npm-install
 
