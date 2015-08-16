@@ -10,7 +10,7 @@ build:
     # Install bower.
     - script:
         name: install bower
-        code: sudo npm install -g bower
+        code: npm install -g bower
 
     # Install client side libraries.
     - script:
