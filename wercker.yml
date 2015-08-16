@@ -10,25 +10,25 @@ build:
           echo "Ruby version $(ruby -v) installed"
           echo "Sass version $(sass -v) installed"
 
-    # Install grunt.
-    - script:
-        name: Install grunt
-        code: sudo npm install -g grunt-cli --allow-root
+    # # Install grunt.
+    # - script:
+    #     name: Install grunt
+    #     code: sudo npm install -g grunt-cli --allow-root
 
-    # Install bower.
-    - script:
-        name: Install bower
-        code: sudo npm install -g bower --allow-root
+    # # Install bower.
+    # - script:
+    #     name: Install bower
+    #     code: sudo npm install -g bower --allow-root
 
-    # Install client side libraries.
-    - script:
-        name: Install client side libraries
-        code: sudo bower install --allow-root
+    # # Install client side libraries.
+    # - script:
+    #     name: Install client side libraries
+    #     code: sudo bower install --allow-root
 
-    # Install npm dependencies.
-    - npm-install
+    # # Install npm dependencies.
+    # - npm-install
 
-    # Run grunt to build the website.
-    - script:
-        name: Build the website
-        code: grunt
+    # # Run grunt to build the website.
+    # - script:
+    #     name: Build the website
+    #     code: grunt
