@@ -14,9 +14,3 @@ build:
     - script:
         name: Build the website
         code: grunt wercker
-
-# Deploy to production
-deploy:
-    steps:
-        - add-to-known_hosts:
-            hostname: ebabel.eu
