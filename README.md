@@ -59,10 +59,10 @@ grunt
 
 ### local
 
-The site can also be run on http://localhost:8080
+The site can also be run on http://localhost:5000
 
 ```
-node server.js
+node index.js
 ```
 
 ## Deployment
