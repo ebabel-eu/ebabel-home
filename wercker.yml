@@ -30,7 +30,7 @@ deploy:
         - script:
             name: compress and transfer application tar ball
             code: |
-                tar cvzf /tmp/deploy.tar index.html robots.txt favicon.ico img/* js/* css/*
+                tar cvzf /tmp/deploy.tar index.html robots.txt favicon.ico img/* js/*.min.* css/*.min.*
                 scp -i $PRIVATEKEY_PATH /tmp/deploy.tar root@ebabel.eu:/opt/temp/
         # - script:
         #     name: uncompress tar ball
