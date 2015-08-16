@@ -1,0 +1,9 @@
+body {
+    background-image: url('/img/old-paper-floral-parchment-background-texture.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+
+    @include respond-to(tablet) {
+        background: none;
+    }
+}

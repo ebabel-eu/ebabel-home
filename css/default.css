@@ -2194,6 +2194,36 @@ a.thumbnail.active {
   color: #843534;
 }
 
+/* line 1, sass/2-layout/_body.scss */
+body {
+  background-image: url("/img/old-paper-floral-parchment-background-texture.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  /* line 1, sass/2-layout/_body.scss */
+  body {
+    background: none;
+  }
+}
+
+/* line 1, sass/2-layout/_container.scss */
+.container {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 0 50px 50px;
+  margin: 50px auto 0;
+  border-radius: 25px;
+}
+@media (max-width: 768px) {
+  /* line 1, sass/2-layout/_container.scss */
+  .container {
+    background-color: transparent;
+    padding: inherit;
+    margin: inherit;
+    border-radius: 0;
+  }
+}
+
 /* line 2, sass/2-layout/_alert.scss */
 .alert h2 {
   margin-top: 0;
@@ -2204,6 +2234,13 @@ a.thumbnail.active {
   padding-left: 100px;
   padding-bottom: 20px;
   border-bottom: 0;
+  margin-top: 15px;
+}
+@media (max-width: 480px) {
+  /* line 1, sass/2-layout/_page-header.scss */
+  .page-header {
+    padding-left: 15px;
+  }
 }
 /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .page-header small:before, .page-header small:after {
@@ -2214,11 +2251,20 @@ a.thumbnail.active {
 .page-header small:after {
   clear: both;
 }
-/* line 10, sass/2-layout/_page-header.scss */
+/* line 15, sass/2-layout/_page-header.scss */
 .page-header img {
   float: left;
   position: absolute;
   top: 20px;
   left: 0;
   height: 90px;
+}
+@media (max-width: 480px) {
+  /* line 15, sass/2-layout/_page-header.scss */
+  .page-header img {
+    float: none;
+    position: relative;
+    margin: 0 auto 50px;
+    display: block;
+  }
 }

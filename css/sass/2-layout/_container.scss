@@ -1,0 +1,13 @@
+.container {
+    background-color: $white-transparent;
+    padding: 0 50px 50px;
+    margin: 50px auto 0;
+    border-radius: 25px;
+
+    @include respond-to(tablet) {
+        background-color: transparent;
+        padding: inherit;
+        margin: inherit;
+        border-radius: 0;
+    }
+}
