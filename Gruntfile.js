@@ -123,6 +123,7 @@ module.exports = function (grunt) {
         },
 
         // Re-run these automated tasks each time certain files are modified.
+        // These tasks are meant for development and include linting.
         watch: {
             sass: {
                 files: [
@@ -172,19 +173,10 @@ module.exports = function (grunt) {
     // Warning: this watch does not include minification.
     
     // Prior to release. One-off build for both css and javascript, including minification: run 'grunt' command.
+    // There is no linting in this version, since linting is meant to happen during development.
     grunt.registerTask('default', [
-        'eslint',
         'concat',
-        'scsslint',
-        'sass',
-        'pleeease',
-        'htmlangular',
-        'cssmin',
-        'uglify'
-    ]);
-
-    grunt.registerTask('sassy', [
-        'scsslint',
+        'uglify',
         'sass',
         'pleeease',
         'cssmin'
