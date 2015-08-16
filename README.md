@@ -76,6 +76,7 @@ git push origin master
 However, code can also be pushed directly to a Heroku instance:
 
 ```
+heroku login
 git push heroku master
 ```
 
