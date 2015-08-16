@@ -1,0 +1,5 @@
+@mixin respond-to($media...) {
+    @each $mediatype in $media {
+        @include respond-to($mediatype) {@content}
+    }
+}

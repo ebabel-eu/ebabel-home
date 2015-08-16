@@ -2,14 +2,6 @@ box: node
 build:
   steps:
 
-    # A custom script step, name value is used in the UI
-    # and the code value contains the command that get executed
-    - script:
-        name: Ruby and sass information
-        code: |
-          echo "Ruby version $(ruby -v) installed"
-          echo "Sass version $(sass -v) installed"
-
     # Install grunt.
     - script:
         name: Install grunt
@@ -22,3 +14,9 @@ build:
     - script:
         name: Build the website
         code: grunt wercker
+
+# Deploy to production
+deploy:
+    steps:
+        - add-to-known_hosts:
+            hostname: ebabel.eu

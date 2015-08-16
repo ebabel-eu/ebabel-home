@@ -3,7 +3,7 @@
 
 // 1-base.
 @import '1-base/variables';
-// mixins added here.
+@import '1-base/mixins/respond-to';
 
 // Bootstrap.
 // Only include the relevant parts of Bootstrap, not everything, to prevent css from growing too large.

@@ -186,6 +186,7 @@ module.exports = function (grunt) {
     ]);
 
     // Tasks dedicated to wercker build and deployment process.
+    // todo: replace that one linting task eslint with automated unit tests that can fail.
     grunt.registerTask('wercker', [
         'eslint'
     ]);
