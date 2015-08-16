@@ -1,11 +1,10 @@
 (function () {
     'use strict';
 
-    var port = 8080,
-        ip = 'localhost',
-        http = require('http'),
-        express = require('express'),
+    var express = require('express'),
         app = express();
+
+    app.set('port', (process.env.PORT || 5000));
 
     // Simple logger.
     app.use(function (req, res, next) {
@@ -26,11 +25,7 @@
     // Handle all static file GET requests.
     app.use(express.static(__dirname + '/'));
 
-    // Listen on two ports: 80 for http and 443 for https.
-    // Note: for Cloud9 and Digital Ocean, ip is '0.0.0.0' instead of the dev environment 'localhost'.
-    http.createServer(
-        app.handle.bind(app)
-    ).listen(port, ip, function() {
-        console.log('Listening on http://' + ip + ':' + port);
+    app.listen(app.get('port'), function() {
+        console.log('Listening on port' + app.get('port'));
     });
 }());
