@@ -5,12 +5,12 @@ build:
     # Install grunt.
     - script:
         name: install grunt
-        code: sudo npm install -g grunt-cli
+        code: sudo npm install -g grunt-cli --allow-root
 
     # Install bower.
     - script:
         name: install bower
-        code: npm install -g bower
+        code: sudo npm install -g bower --allow-root
 
     # Install client side libraries.
     - script:
