@@ -1,8 +1,12 @@
 box: node
+services:
+   - elasticsearch
 build:
   steps:
 
-    - bundle-install
+    - script:
+        name: env
+        code: env
 
     # Install grunt.
     - script:
