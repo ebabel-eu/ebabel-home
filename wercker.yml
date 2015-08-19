@@ -1,4 +1,6 @@
 box: node
+services:
+    - phusion/passenger-ruby22
 build:
   steps:
 
