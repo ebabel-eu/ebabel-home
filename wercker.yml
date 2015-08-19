@@ -4,9 +4,10 @@ services:
 build:
   steps:
 
+    # Install Sass gem.
     - script:
-        name: env
-        code: env
+        name: Install Sass gem
+        code: sudo gem install sass --allow-root
 
     # Install grunt.
     - script:
