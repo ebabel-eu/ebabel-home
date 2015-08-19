@@ -6,10 +6,12 @@ build:
 
     # Install Sass gem.
     - script:
-        name: Install Sass gem
-        code: |
-            sudo apt-get install rubygems
-            gem install sass
+        name: Install Ruby gems
+        code: sudo apt-get install rubygems
+
+    - script:
+        name: Install Sass
+        code: gem install sass
 
     # Install grunt.
     - script:
