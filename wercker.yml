@@ -1,6 +1,7 @@
 box: node
 services:
-   - elasticsearch
+   - ruby
+   - sass
 build:
   steps:
 
