@@ -126,18 +126,18 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     // includes files within path
-                    {
-                        expand: true, 
-                        src: ['src/img/*'], 
-                        dest: 'build/', 
-                        filter: 'isFile'
-                    },
+                    // {
+                    //     expand: true, 
+                    //     src: ['src/img/*'], 
+                    //     dest: 'build/', 
+                    //     filter: 'isFile'
+                    // }
 
-                    // includes files within path and its sub-directories
-                    {expand: true, src: ['path/**'], dest: 'dest/'},
+                    // // includes files within path and its sub-directories
+                    // {expand: true, src: ['path/**'], dest: 'dest/'},
 
-                    // makes all src relative to cwd
-                    {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
+                    // // makes all src relative to cwd
+                    // {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
 
                     // flattens results to a single level
                     {
