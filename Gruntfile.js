@@ -10,8 +10,8 @@ module.exports = function (grunt) {
                 configFile: './lint/es-lint.json'    // Default rules: http://eslint.org/docs/rules/
             },
             target: [
-                './js/scripts/*.js',
-                './js/scripts/**/*.js'
+                './src/js/scripts/*.js',
+                './src/js/scripts/**/*.js'
             ]
         },
 
@@ -23,7 +23,7 @@ module.exports = function (grunt) {
             js: {
                 files: {
                     // Third party javascript dependencies used in this website.
-                    './js/dependencies.js' : [
+                    './build/js/dependencies.js' : [
                         // Libraries managed with Bower.
                         './bower_components/angular/angular.js'
 
@@ -31,17 +31,37 @@ module.exports = function (grunt) {
                     ],
                     
                     // All custom scripts written for this website.
-                    './js/scripts.js': [
-                        './js/scripts/*.js'
+                    './build/js/scripts.js': [
+                        './src/js/scripts/*.js'
                     ]
+                }
+            }
+        },
+
+        uglify: {
+            options: {
+                mangle: false,
+                sourceMap: true,
+                compress: {
+                    drop_console: true
+                }
+            },
+            scripts: {
+                files: {
+                    './build/js/scripts.min.js': ['./build/js/scripts.js']
+                }
+            },
+            dependencies: {
+                files: {
+                    './build/js/dependencies.min.js': ['./build/js/dependencies.js']
                 }
             }
         },
 
         scsslint: {
             allFiles: [
-                './css/sass/default.scss',
-                './css/sass/**/*.scss'
+                './src/sass/default.scss',
+                './src/sass/**/*.scss'
             ],
             options: {
                 config: './lint/scss-lint.yml',
@@ -57,7 +77,7 @@ module.exports = function (grunt) {
                     'sourcemap=none': ''
                 },
                 files: {
-                    './css/default.css': './css/sass/default.scss'
+                    './build/css/default.css': './src/sass/default.scss'
                 }
             }
         },
@@ -71,7 +91,7 @@ module.exports = function (grunt) {
                     minifier: false
                 },
                 files: {
-                    './css/default.css': './css/default.css'
+                    './build/css/default.css': './build/css/default.css'
                 }
             }
         },
@@ -82,7 +102,7 @@ module.exports = function (grunt) {
             },
             files: {
                 src: [
-                    './*.html'
+                    './src/*.html'
                 ]
             }
         },
@@ -94,41 +114,49 @@ module.exports = function (grunt) {
             target: {
                 files: [{
                     expand: true,
-                    cwd: './css',
+                    cwd: './build/css',
                     src: ['*.css', '!*.min.css'],
-                    dest: './css',
+                    dest: './build/css',
                     ext: '.min.css'
                 }]
             }
         },
 
-        uglify: {
-            options: {
-                mangle: false,
-                sourceMap: true,
-                compress: {
-                    drop_console: true
-                }
-            },
-            scripts: {
-                files: {
-                    './js/scripts.min.js': ['./js/scripts.js']
-                }
-            },
-            dependencies: {
-                files: {
-                    './js/dependencies.min.js': ['./js/dependencies.js']
-                }
-            }
-        },
+        copy: {
+            main: {
+                files: [
+                    // includes files within path
+                    {
+                        expand: true, 
+                        src: ['src/img/*'], 
+                        dest: 'build/', 
+                        filter: 'isFile'
+                    },
 
+                    // includes files within path and its sub-directories
+                    {expand: true, src: ['path/**'], dest: 'dest/'},
+
+                    // makes all src relative to cwd
+                    {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
+
+                    // flattens results to a single level
+                    {
+                        expand: true, 
+                        flatten: true, 
+                        src: ['src/img/**'], 
+                        dest: 'build/', 
+                        filter: 'isFile'
+                    }
+                ],
+            },
+        },
         // Re-run these automated tasks each time certain files are modified.
         // These tasks are meant for development and include linting.
         watch: {
             sass: {
                 files: [
                     './lint/scss-lint.yml',
-                    './css/**/*.scss'
+                    './src/css/**/*.scss'
                 ],
                 tasks: [
                     'scsslint',
@@ -139,8 +167,8 @@ module.exports = function (grunt) {
             scripts: {
                 files: [
                     './lint/es-lint.json',
-                    './js/scripts/*.js',
-                    './js/scripts/**/*.js'
+                    './src/js/scripts/*.js',
+                    './src/js/scripts/**/*.js'
                 ],
                 tasks: [
                     'eslint',
@@ -149,7 +177,7 @@ module.exports = function (grunt) {
             },
             html: {
                 files: [
-                    'index.html'
+                    'src/index.html'
                 ],
                 tasks: [
                     'htmlangular'
@@ -182,17 +210,14 @@ module.exports = function (grunt) {
         'uglify',
         'sass',
         'pleeease',
-        'cssmin'
+        'cssmin',
+        'copy'
     ]);
 
     // Tasks dedicated to wercker build and deployment process.
     // todo: replace that one linting task eslint with automated unit tests that can fail.
     grunt.registerTask('wercker', [
-        'eslint'
+        'eslint',
+        'htmlangular'
     ]);
 };
-
-
-
-
-

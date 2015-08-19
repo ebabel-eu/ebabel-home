@@ -23,7 +23,7 @@
     });
 
     // Handle all static file GET requests.
-    app.use(express.static(__dirname + '/'));
+    app.use(express.static(__dirname + '/build'));
 
     app.listen(app.get('port'), function() {
         console.log('Listening on port ' + app.get('port'));
