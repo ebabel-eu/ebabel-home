@@ -1,7 +1,6 @@
 box: node
 services:
    - ruby
-   - sass
 build:
   steps:
 
