@@ -4,10 +4,7 @@ services:
 build:
   steps:
 
-    # Install Sass gem.
-    - script:
-        name: Install Ruby gems
-        code: sudo apt-get install rubygems
+    - bundle-install
 
     - script:
         name: Install Sass
