@@ -7,7 +7,7 @@ build:
     # Install Sass gem.
     - script:
         name: Install Sass gem
-        code: sudo gem install sass --allow-root
+        code: gem install sass
 
     # Install grunt.
     - script:
