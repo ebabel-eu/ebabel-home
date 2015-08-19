@@ -2268,3 +2268,8 @@ body {
     display: block;
   }
 }
+
+/* line 1, sass/2-layout/_thumbnail.scss */
+.thumbnail {
+  padding: 4px 16px;
+}
