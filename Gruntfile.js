@@ -123,33 +123,46 @@ module.exports = function (grunt) {
         },
 
         copy: {
+            html: {
+                        nonull: true,
+                        src: [
+                            'src/index.html',
+                        ], 
+                        dest: 'build/index.html',
+                        options: {
+                            process: function (content, srcpath) {
+                                return content
+                                    .replace(/\.css/g,'.min.css')
+                                    .replace(/\.js/g, '.min.js')
+                                    .replace(/analytics.min.js/g, 'analytics.js');
+                            },
+                        }
+
+            },
             main: {
                 files: [
-                    // includes files within path
-                    // {
-                    //     expand: true, 
-                    //     src: ['src/img/*'], 
-                    //     dest: 'build/', 
-                    //     filter: 'isFile'
-                    // }
-
-                    // // includes files within path and its sub-directories
-                    // {expand: true, src: ['path/**'], dest: 'dest/'},
-
-                    // // makes all src relative to cwd
-                    // {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
-
-                    // flattens results to a single level
+                    {
+                        nonull: true,
+                        expand: true, 
+                        flatten: true, 
+                        src: [
+                            'src/robots.txt',
+                            'src/favicon.ico'
+                        ], 
+                        dest: 'build/',
+                        filter: 'isFile'
+                    },
                     {
                         expand: true, 
                         flatten: true, 
                         src: ['src/img/**'], 
-                        dest: 'build/', 
+                        dest: 'build/img/', 
                         filter: 'isFile'
                     }
                 ],
             },
         },
+
         // Re-run these automated tasks each time certain files are modified.
         // These tasks are meant for development and include linting.
         watch: {
@@ -161,7 +174,8 @@ module.exports = function (grunt) {
                 tasks: [
                     'scsslint',
                     'sass',
-                    'pleeease'
+                    'pleeease',
+                    'copy'
                 ]
             },
             scripts: {
@@ -172,7 +186,8 @@ module.exports = function (grunt) {
                 ],
                 tasks: [
                     'eslint',
-                    'concat'
+                    'concat',
+                    'copy'
                 ]
             },
             html: {
@@ -180,7 +195,8 @@ module.exports = function (grunt) {
                     'src/index.html'
                 ],
                 tasks: [
-                    'htmlangular'
+                    'htmlangular',
+                    'copy'
                 ]
             },
             grunt: {
@@ -193,7 +209,8 @@ module.exports = function (grunt) {
                     'scsslint',
                     'sass',
                     'pleeease',
-                    'htmlangular'
+                    'htmlangular',
+                    'copy'
                 ]
             }
         }
