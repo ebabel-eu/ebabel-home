@@ -1,8 +1,8 @@
 .page-header {
-    padding-left: 100px;
+    padding-left: 115px;
     padding-bottom: 20px;
     border-bottom: 0;
-    margin-top: 15px;
+    margin-top: 5px;
 
     @include respond-to(mobile) {
         padding-left: 15px;
@@ -16,7 +16,7 @@
         float: left;
         position: absolute;
         top: 20px;
-        left: 0;
+        left: 15px;
         height: 90px;
 
         @include respond-to(mobile) {
@@ -24,6 +24,7 @@
             position: relative;
             margin: 0 auto 50px;
             display: block;
+            left: 0;
         }
     }
 }

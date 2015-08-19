@@ -2207,16 +2207,16 @@ body {
   }
 }
 
-/* line 1, sass/2-layout/_container.scss */
-.container {
+/* line 1, sass/2-layout/_wrapper.scss */
+.wrapper {
   background-color: rgba(255, 255, 255, 0.75);
-  padding: 0 50px 50px;
-  margin: 50px auto 0;
+  padding: 0 30px 50px;
+  margin: 30px auto 0;
   border-radius: 25px;
 }
 @media (max-width: 768px) {
-  /* line 1, sass/2-layout/_container.scss */
-  .container {
+  /* line 1, sass/2-layout/_wrapper.scss */
+  .wrapper {
     background-color: transparent;
     padding: inherit;
     margin: inherit;
@@ -2231,10 +2231,10 @@ body {
 
 /* line 1, sass/2-layout/_page-header.scss */
 .page-header {
-  padding-left: 100px;
+  padding-left: 115px;
   padding-bottom: 20px;
   border-bottom: 0;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 @media (max-width: 480px) {
   /* line 1, sass/2-layout/_page-header.scss */
@@ -2256,7 +2256,7 @@ body {
   float: left;
   position: absolute;
   top: 20px;
-  left: 0;
+  left: 15px;
   height: 90px;
 }
 @media (max-width: 480px) {
@@ -2266,6 +2266,7 @@ body {
     position: relative;
     margin: 0 auto 50px;
     display: block;
+    left: 0;
   }
 }
 

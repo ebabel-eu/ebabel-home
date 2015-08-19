@@ -1,7 +1,7 @@
-.container {
+.wrapper {
     background-color: $white-transparent;
-    padding: 0 50px 50px;
-    margin: 50px auto 0;
+    padding: 0 30px 50px;
+    margin: 30px auto 0;
     border-radius: 25px;
 
     @include respond-to(tablet) {
