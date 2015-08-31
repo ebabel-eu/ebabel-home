@@ -11,6 +11,12 @@ This is a single page that leads to other projects. It's not the start of a webs
 ## todo
 
 - Add JSDoc once I start writing Javascript.
+- Turn everything into a client side app (Angular.js I guess). Single page app with hashbug sub-pages.
+- Gamify filtering recruiter with questions and instant feedback on whether the job they have in mind is better than my current one.
+- Move the whole app from Heroku to gh-pages with a real domain name (ebabel.eu or www.ebabel.eu).
+- Add unit tests.
+- Add end-to-end tests.
+
 
 ## Front-end
 
