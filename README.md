@@ -1,6 +1,8 @@
 # eBabel home 
 
 [![wercker status](https://app.wercker.com/status/1d2bb48a0faefdfef38c6a82f93dcbdb/s/master "wercker status")](https://app.wercker.com/project/bykey/1d2bb48a0faefdfef38c6a82f93dcbdb)
+[![Dependency Status](https://david-dm.org/ebabel-eu/ebabel-home.svg)](https://david-dm.org/ebabel-eu/ebabel-home)
+[![devDependency Status](https://david-dm.org/ebabel-eu/ebabel-home/dev-status.svg)](https://david-dm.org/ebabel-eu/ebabel-home#info=devDependencies)
 
 HTML only homepage to any project of mine.
 
