@@ -17,4 +17,4 @@ class Main extends React.Component {
     }
 }
 
-ReactDOM.render(<Main />, document.getElementById('contactform'));
+ReactDOM.render(<Main />, document.getElementById('main'));
