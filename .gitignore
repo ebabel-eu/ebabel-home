@@ -5,3 +5,4 @@ node_modules
 html-angular-validate-report.json
 ssl
 build/bundle.*
+coverage

@@ -20,6 +20,12 @@ npm install http-server -g
 webpack -w
 ```
 
+### Run unit tests continuously during development
+
+```
+npm run watch
+```
+
 ### Run locally
 
 ```
@@ -32,6 +38,12 @@ Browse to http://localhost:8080
 
 ```
 webpack
+```
+
+### Run unit tests once before deployment
+
+```
+npm test
 ```
 
 ## Deployment to Production
