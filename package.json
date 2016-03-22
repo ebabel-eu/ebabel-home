@@ -29,8 +29,7 @@
     "nyc": "6.0.0",
     "raw-loader": "0.5.1",
     "sinon": "1.17.3",
-    "webpack": "1.12.14",
-    "webpack-dev-server": "1.14.1"
+    "webpack": "1.12.14"
   },
   "dependencies": {
     "classnames": "2.2.3",

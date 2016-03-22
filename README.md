@@ -2,6 +2,10 @@
 
 Web application tool to communicate what I'm working on, get in touch, schedule meetings with me and possibly hire me.
 
+## Design
+
+The design is in line with [React Toolbox](http://react-toolbox.com/) controls.
+
 ## Front-end
 
 ### Installation

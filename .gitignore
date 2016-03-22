@@ -6,3 +6,4 @@ html-angular-validate-report.json
 ssl
 build/bundle.*
 coverage
+.nyc_output
