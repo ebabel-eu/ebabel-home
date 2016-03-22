@@ -230,4 +230,9 @@ module.exports = function (grunt) {
         'cssmin',
         'copy'
     ]);
+
+    grunt.registerTask('wercker', [
+        'eslint',
+        'htmlangular'
+    ]);
 };

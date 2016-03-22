@@ -13,7 +13,7 @@ build:
     # Run grunt to build the website.
     - script:
         name: Build the website
-        code: grunt
+        code: grunt wercker
 
 # Deploy to production
 deploy:
