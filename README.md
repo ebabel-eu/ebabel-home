@@ -17,20 +17,6 @@ npm install webpack-dev-server -g
 ### Build continuously during development
 
 ```
-webpack -w
-```
-
-### Build once before a deployment
-
-```
-webpack
-```
-
-## Run locally
-
-### local
-
-```
 webpack-dev-server build/
 ```
 
