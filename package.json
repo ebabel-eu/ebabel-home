@@ -24,11 +24,16 @@
     "babel-register": "6.5.2",
     "chai": "3.5.0",
     "chai-as-promised": "5.2.0",
+    "css-loader": "0.23.1",
     "istanbul": "0.4.2",
     "mocha": "2.4.5",
+    "node-sass": "3.4.2",
+    "normalize.css": "3.0.3",
     "nyc": "6.0.0",
     "raw-loader": "0.5.1",
+    "sass-loader": "3.2.0",
     "sinon": "1.17.3",
+    "style-loader": "0.13.0",
     "webpack": "1.12.14"
   },
   "dependencies": {
