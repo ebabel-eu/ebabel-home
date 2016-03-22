@@ -11,13 +11,27 @@ If you have a new machine and have never used some of these tools, see further i
 ```
 npm install
 npm install webpack -g
-npm install webpack-dev-server -g
+npm install http-server -g
 ```
 
 ### Build continuously during development
 
 ```
-webpack-dev-server build/
+webpack -w
+```
+
+### Run locally
+
+```
+http-server build/
+```
+
+Browse to http://localhost:8080
+
+### Build once before deployment
+
+```
+webpack
 ```
 
 ## Deployment to Production
@@ -29,3 +43,8 @@ Any code pushed to master will be published via continuous integration with Jenk
 ```
 git push origin master
 ```
+
+## Todo:
+
+- build app (make a list of issues in Github)
+- setup Jenkins
