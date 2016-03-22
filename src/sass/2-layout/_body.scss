@@ -1,9 +1,0 @@
-body {
-    background-image: url('/img/gradient-26041-26726-hd-wallpapers.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-
-    @include respond-to(tablet) {
-        background: none;
-    }
-}
