@@ -25,6 +25,7 @@
     "chai": "3.5.0",
     "chai-as-promised": "5.2.0",
     "css-loader": "0.23.1",
+    "imports-loader": "0.6.5",
     "istanbul": "0.4.2",
     "mocha": "2.4.5",
     "node-sass": "3.4.2",
@@ -36,12 +37,16 @@
     "webpack": "1.12.14"
   },
   "dependencies": {
+    "bootstrap": "3.3.6",
     "classnames": "2.2.3",
+    "file-loader": "0.8.5",
     "immutable": "3.7.6",
+    "jquery": "2.2.0",
     "lodash": "4.6.1",
     "normalize.css": "3.0.3",
     "react": "0.14.7",
     "react-addons-css-transition-group": "0.14.7",
-    "react-dom": "0.14.7"
+    "react-dom": "0.14.7",
+    "sizzle": "2.3.0"
   }
 }

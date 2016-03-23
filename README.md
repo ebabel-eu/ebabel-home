@@ -2,10 +2,6 @@
 
 Web application tool to communicate what I'm working on, get in touch, schedule meetings with me and possibly hire me.
 
-## Design
-
-The style is in line with [React + Foundation](https://github.com/nordsoftware/react-foundation).
-
 ## Front-end
 
 ### Installation

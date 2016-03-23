@@ -7,5 +7,10 @@ ssl
 build/*.js
 build/*.json
 build/*.map
+build/*.eot
+build/*.woff
+build/*.woff2
+build/*.ttf
+build/*.svg
 coverage
 .nyc_output

@@ -12,7 +12,10 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.scss', '.css']
+    extensions: ['', '.js', '.jsx', '.scss', '.css'],
+    alias: {
+      jquery: 'jquery/src/jquery'
+    }
   },
   module: {
     loaders: [
@@ -31,12 +34,18 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style!css?'
+      },
+      {
+        test: /\.eot|woff|woff2|ttf|svg?$/,
+        loader: 'file-loader'
       }
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery'
+    }),
     new webpack.optimize.UglifyJsPlugin({
       include: /\.min\.js$/,
       minimize: true,
