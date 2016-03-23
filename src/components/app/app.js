@@ -6,7 +6,7 @@ import NavigationBar from '../navigation-bar/navigation-bar.js';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className='container'>
         <NavigationBar />
         <p>The rest of the app will be here...</p>
       </div>

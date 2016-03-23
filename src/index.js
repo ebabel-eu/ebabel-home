@@ -8,6 +8,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 // Internal dependencies.
 import App from './components/app/app';
+import './index.css';
 
 ReactDom.render(
   <App />, 
