@@ -4,6 +4,8 @@ node_modules
 .sass-cache
 html-angular-validate-report.json
 ssl
-build/bundle.*
+build/*.js
+build/*.json
+build/*.map
 coverage
 .nyc_output

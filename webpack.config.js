@@ -12,12 +12,12 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.scss']
+    extensions: ['', '.js', '.jsx', '.scss', '.css']
   },
   module: {
     loaders: [
       {
-        test: /\.js?$/,
+        test: /\.js|jsx?$/,
         exclude: /(node_modules)/,
         loader: 'babel',
         query: {
@@ -27,6 +27,10 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: 'style!css!sass'
+      },
+      {
+        test: /\.css$/,
+        loader: 'style!css?'
       }
     ]
   },
