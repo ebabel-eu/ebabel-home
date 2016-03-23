@@ -4,7 +4,7 @@ Web application tool to communicate what I'm working on, get in touch, schedule 
 
 ## Design
 
-The design is in line with [React Toolbox](http://react-toolbox.com/) controls.
+The style is in line with [React + Foundation](https://github.com/nordsoftware/react-foundation).
 
 ## Front-end
 
