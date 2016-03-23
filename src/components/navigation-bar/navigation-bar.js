@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Header from './header/Header';
+
 const actions = [
   { label: 'Current projects', current: true },
   { label: 'Get in touch', current: false },
@@ -10,15 +12,7 @@ const actions = [
 const NavigationBar = () => (
   <nav className='navbar navbar-default'>
     <div className='container-fluid'>
-      <div className='navbar-header'>
-        <button type='button' className='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'>
-          <span className='sr-only'>Toggle navigation</span>
-          <span className='icon-bar'></span>
-          <span className='icon-bar'></span>
-          <span className='icon-bar'></span>
-        </button>
-        <a className='navbar-brand' href='#'>Nadjib</a>
-      </div>
+      <Header />
       <div className='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
         <ul className='nav navbar-nav'>
           {
