@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 
-import NavigationBar from '../navigation-bar/navigation-bar.js';
+import NavigationBar from '../navigation-bar/navigation-bar';
 
 class App extends Component {
   render() {

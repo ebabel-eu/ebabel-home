@@ -3,8 +3,8 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'bundle': './src/index.js',
-    'bundle.min': './src/index.js'
+    'bundle': './src',
+    'bundle.min': './src'
   },
   devtool: 'source-map',
   output: {

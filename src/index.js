@@ -1,16 +1,14 @@
 // React
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
+import Router from 'react-router';
 
 // Bootstrap
-import '../node_modules/bootstrap/dist/js/npm.js';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/npm.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Internal dependencies.
-import App from './components/app/app';
+import routes from './config/routes';
 import './index.css';
 
-ReactDom.render(
-  <App />, 
-  document.getElementById('root')
-);
+ReactDOM.render(<Router routes={routes} />, document.getElementById('root'));
