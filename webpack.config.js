@@ -3,8 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'bundle': './src',
-    'bundle.min': './src'
+    'bundle': './src/app'
   },
   devtool: 'source-map',
   output: {
@@ -12,10 +11,7 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.scss', '.css'],
-    alias: {
-      jquery: 'jquery/src/jquery'
-    }
+    extensions: ['', '.js', '.jsx', '.scss', '.css']
   },
   module: {
     loaders: [
@@ -34,24 +30,7 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style!css?'
-      },
-      {
-        test: /\.eot|woff|woff2|ttf|svg?$/,
-        loader: 'file-loader'
       }
     ]
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery'
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      include: /\.min\.js$/,
-      minimize: true,
-      compress: {
-        warnings: false
-      }
-    })
-  ]
+  }
 };
