@@ -12,7 +12,7 @@ class Nav extends Component {
         <ul className='nav navbar-nav'>
           {
             actions.links.map((link, i) => {
-              if (link.current) {
+              if (window.location.hash.substr(1).split('?')[0] === link.url) {
                 return (
                   <li key={i} className='active'>
                     <a>

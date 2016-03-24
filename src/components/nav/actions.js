@@ -14,7 +14,7 @@ class Actions {
 
   defaultLinks() {
     const links = [
-      { label: 'Current projects', url: '/', current: true},
+      { label: 'Current projects', url: '/' },
       { label: 'Get in touch', url: '/get-in-touch' },
       { label: 'When am I free', url: '/when-am-i-free' },
       { label: 'Hire me', url: '/hire-me' }
