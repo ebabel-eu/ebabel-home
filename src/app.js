@@ -17,7 +17,7 @@ import './app.css';
 const App = React.createClass({
   render() {
     return (
-     <div className='container'>
+      <div className='container'>
         <nav className='navbar navbar-default'>
           <div className='container-fluid'>
             <Header />
