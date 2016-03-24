@@ -1,9 +1,11 @@
 // React
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 
 // Internal dependencies.
+import Header from './components/nav/header/header';
+import Nav from './components/nav/nav';
 import Projects from './components/projects/projects';
 import GetInTouch from './components/get-in-touch/get-in-touch';
 import './app.css';
@@ -11,34 +13,24 @@ import './app.css';
 const App = React.createClass({
   render() {
     return (
-      <nav>
-        <ul>
-          <li><Link to="/">Current projects</Link></li>
-          <li><Link to="/get-in-touch">Get in touch</Link></li>
-        </ul>
-
-        {/*
-
-    const links = [
-      { label: 'Current projects', url: '/', current: true},
-      { label: 'Get in touch', url: '/get-in-touch' },
-      { label: 'When am I free', url: '/when-am-i-free' },
-      { label: 'Hire me', url: '/hire-me' }
-    ];
-          next we replace `<Child>` with `this.props.children`
-          the router will figure out the children for us
-        */}
+     <div className='container'>
+        <nav className='navbar navbar-default'>
+          <div className='container-fluid'>
+            <Header />
+            <Nav />
+          </div>
+        </nav>
         {this.props.children}
-      </nav>
+      </div>
     )
   }
 })
 
 render((
   <Router history={hashHistory}>
-    <Route path="/" component={App}>
+    <Route path='/' component={App}>
       <IndexRoute component={Projects} />
-      <Route path="get-in-touch" component={GetInTouch} />
+      <Route path='get-in-touch' component={GetInTouch} />
     </Route>
   </Router>
 ), document.getElementById('root'))

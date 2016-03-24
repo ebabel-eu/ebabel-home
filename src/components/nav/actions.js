@@ -14,10 +14,10 @@ class Actions {
 
   defaultLinks() {
     const links = [
-      { label: 'Current projects', url: '/#', current: true},
-      { label: 'Get in touch', url: '/#get-in-touch' },
-      { label: 'When am I free', url: '/#when-am-i-free' },
-      { label: 'Hire me', url: '/#hire-me' }
+      { label: 'Current projects', url: '/', current: true},
+      { label: 'Get in touch', url: '/get-in-touch' },
+      { label: 'When am I free', url: '/when-am-i-free' },
+      { label: 'Hire me', url: '/hire-me' }
     ];
 
     return links;

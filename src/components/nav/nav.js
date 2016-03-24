@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router'
 
 import Actions from './actions';
 
@@ -23,9 +24,9 @@ class Nav extends Component {
               } else {
                 return (
                   <li key={i}>
-                    <a href={link.url}>
+                    <Link to={link.url}>
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 )
               }
