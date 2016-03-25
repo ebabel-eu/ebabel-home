@@ -20,7 +20,7 @@ class Pictologo extends Component {
             <p>
               I want to rewrite this code into a React Native app.
             </p>
-            <h4>Why React Native?</h4>
+            <p><strong>Why React Native?</strong></p>
             <p>
               Thanks to React Native, I will target both the iOS and the Android devices, 
               with a high percentage of <mark>code re-use</mark>: I&apos;m hoping for more than 90%.
@@ -30,7 +30,7 @@ class Pictologo extends Component {
               that renders an HTML5 app.
             </p>
             <p>Besides moving into the iOS platform, I also want to add new functionality.</p>
-            <h4>RESTful web API</h4>
+            <p><strong>RESTful web API</strong></p>
             <p>
               The content of the game is currently hard coded. I want to move this content 
               to a RESTful web API that can be 100% <mark>re-used by all platforms</mark> (Android, iOS and web).
