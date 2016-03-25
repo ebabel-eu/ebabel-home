@@ -2,19 +2,21 @@ import React, { Component } from 'react';
 import { Link } from 'react-router'
 
 import Actions from './actions';
-
-import updatePageTitle from './update-page-title';
+import UpdatePageTitle from './update-page-title.js';
 
 const actions = new Actions();
 
 class Nav extends Component {
   render() {
+    const currentUrl = window.location.hash.substr(1).split('?')[0];
+    const updatePageTitle = new UpdatePageTitle({ currentUrl: currentUrl, links: actions.links });
+
     return (
       <div className='collapse navbar-collapse' id='bs-navbar'>
         <ul className='nav navbar-nav'>
           {
             actions.links.map((link, i) => {
-              if (window.location.hash.substr(1).split('?')[0] === link.url) {
+              if (currentUrl === link.url) {
                 return (
                   <li key={i} className='active'>
                     <a>
