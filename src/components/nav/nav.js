@@ -3,6 +3,8 @@ import { Link } from 'react-router'
 
 import Actions from './actions';
 
+import updatePageTitle from './update-page-title';
+
 const actions = new Actions();
 
 class Nav extends Component {

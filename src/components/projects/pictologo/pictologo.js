@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 
+import ProgressBar from '../../progress-bar/progress-bar';
+
 class Pictologo extends Component {
   render() {
     return (
       <article className='col-md-4 col-sm-6'>
         <div className='panel panel-default'>
-          <div className='panel-heading'><h3 className='panel-title'>Rewriting an Android game</h3></div>
+          <div className='panel-heading'>
+            <h3 className='panel-title'>Rewriting an Android game</h3>
+          </div>
           <div className='panel-body'>
             <p>
               I programmed <a href="https://play.google.com/store/apps/details?id=nl.websitekrijgen.androidgames.palabras.nl" 
@@ -32,6 +36,9 @@ class Pictologo extends Component {
               to a RESTful web API that can be 100% <mark>re-used by all platforms</mark> (Android, iOS and web).
             </p>
             <p>With this web API, I will <mark>easily add new content</mark> without having to change any code.</p>
+          </div>
+          <div className='panel-footer'>
+            <ProgressBar amount={30} unit='%' />
           </div>
         </div>
       </article>
