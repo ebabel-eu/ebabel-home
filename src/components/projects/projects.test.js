@@ -1,20 +1,20 @@
 import chai from 'chai';
 
-import App from './app.js';
+import Projects from './projects.js';
 
-describe('App', () => {
+describe('Projects', () => {
 
   it('can be instantiated with a constructor', () => {
-    const app = new App();
+    const projects = new Projects();
 
-    chai.assert.instanceOf(app, App);
+    chai.assert.instanceOf(projects, Projects);
   })
 
   describe('#render', () => {
 
     it('returns something that is not undefined', () => {
-      const app = new App();
-      const result = app.render();
+      const projects = new Projects();
+      const result = projects.render();
 
       chai.assert.notEqual(result, undefined);
     })
