@@ -12,9 +12,9 @@ class ProgressBar extends Component {
       <div className='progress'>
         <div className='progress-bar' 
             data-role='progressbar' 
-            data-aria-valuenow={this.props.amount} 
-            data-aria-valuemin='0' 
-            data-aria-valuemax='100' 
+            aria-valuenow={this.props.amount} 
+            aria-valuemin='0' 
+            aria-valuemax='100' 
             style={styles}>
           {this.props.amount}{this.props.unit || '%'}
         </div>
