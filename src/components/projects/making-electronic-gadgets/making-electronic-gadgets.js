@@ -8,7 +8,7 @@ class MakingElectronicGadgets extends Component {
       <article className='col-md-4 col-sm-6'>
         <div className='panel panel-default'>
           <div className='panel-heading'>
-            <h3 className='panel-title'>Making electronic gadgets</h3>
+            <h2 className='panel-title'>Making electronic gadgets</h2>
           </div>
           <div className='panel-body'>
             <p>I&apos;ve started making electronic gadgets with an <mark>Arduino</mark> starter kit.</p>

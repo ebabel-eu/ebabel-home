@@ -8,7 +8,7 @@ class Pictologo extends Component {
       <article className='col-md-4 col-sm-6'>
         <div className='panel panel-default'>
           <div className='panel-heading'>
-            <h3 className='panel-title'>Rewriting an Android game</h3>
+            <h2 className='panel-title'>Rewriting an Android game</h2>
           </div>
           <div className='panel-body'>
             <p>

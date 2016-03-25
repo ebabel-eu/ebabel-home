@@ -4,7 +4,11 @@ class Header extends Component {
   render() {
     return (
       <div className='col-md-12'>
-        <h2 className='well well-lg h3'>{this.props.title}</h2>
+        <div className='page-header'>
+          <h1 className='h2'>
+            {this.props.title}
+          </h1>
+        </div>
       </div>
     );
   }

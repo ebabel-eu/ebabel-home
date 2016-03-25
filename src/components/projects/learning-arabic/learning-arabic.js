@@ -8,7 +8,7 @@ class LearningArabic extends Component {
       <article className='col-md-4 col-sm-6'>
         <div className='panel panel-default'>
           <div className='panel-heading'>
-            <h3 className='panel-title'>Learning Arabic</h3>
+            <h2 className='panel-title'>Learning Arabic</h2>
           </div>
           <div className='panel-body'>
             <p>I was born and grew up in France, but my parents are from Morocco and Algeria.</p>
