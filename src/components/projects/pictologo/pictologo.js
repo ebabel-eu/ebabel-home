@@ -5,7 +5,7 @@ import ProgressBar from '../../progress-bar/progress-bar';
 class Pictologo extends Component {
   render() {
     return (
-      <article className='col-md-4 col-sm-6'>
+      <article className='col-md-4 col-sm-6 ndj-project'>
         <div className='panel panel-default'>
           <div className='panel-heading'>
             <h2 className='panel-title'>Rewriting an Android game</h2>

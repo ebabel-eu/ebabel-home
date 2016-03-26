@@ -13,7 +13,7 @@ import GetInTouch from './components/get-in-touch/get-in-touch';
 import WhenAmIFree from './components/when-am-i-free/when-am-i-free';
 import HireMe from './components/hire-me/hire-me';
 
-import './app.css';
+import './app.scss';
 
 const App = React.createClass({
   render() {
