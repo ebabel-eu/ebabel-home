@@ -22,7 +22,7 @@ class MakingElectronicGadgets extends Component {
             </p>
           </div>
           <div className='panel-footer'>
-            <ProgressBar amount={15} unit='%' />
+            <ProgressBar amount={15} />
           </div>
         </div>
       </article>

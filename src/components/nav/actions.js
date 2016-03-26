@@ -2,7 +2,7 @@ class Actions {
 
   constructor(links = null) {
     this.links = links || 
-      (localStorage['links'] && JSON.parse(localStorage['links'])) || 
+      localStorage['links'] && JSON.parse(localStorage['links']) || 
       this.defaultLinks();
 
     this.storeLinks();

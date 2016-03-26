@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './progress-bar.css';
+import './progress-bar.scss';
 
 class ProgressBar extends Component {
   render() {
@@ -16,11 +16,20 @@ class ProgressBar extends Component {
             aria-valuemin='0' 
             aria-valuemax='100' 
             style={styles}>
-          {this.props.amount}{this.props.unit || '%'}
+          {this.props.amount}{this.props.unit}
         </div>
       </div>
     )
   }
+}
+
+ProgressBar.defaultProps = {
+  unit: '%'
+}
+
+ProgressBar.propTypes = {
+  amount: React.PropTypes.number.isRequired,
+  unit: React.PropTypes.string
 }
 
 export default ProgressBar;

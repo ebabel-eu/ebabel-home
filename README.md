@@ -61,3 +61,4 @@ git push origin master
 - build app (make a list of issues in Github)
 - setup Jenkins
 - look into ["tree shaking"](https://medium.com/modus-create-front-end-development/webpack-2-tree-shaking-configuration-9f1de90f3233#.ceyvzb1bl) to make the webpack bundle smaller
+- webpack is adding a Hash at every build (see console). Can I use this for cache busting purposes?

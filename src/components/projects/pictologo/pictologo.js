@@ -38,7 +38,7 @@ class Pictologo extends Component {
             <p>With this web API, I will <mark>easily add new content</mark> without having to change any code.</p>
           </div>
           <div className='panel-footer'>
-            <ProgressBar amount={30} unit='%' />
+            <ProgressBar amount={30} />
           </div>
         </div>
       </article>

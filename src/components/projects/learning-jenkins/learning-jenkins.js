@@ -15,7 +15,7 @@ class LearningJenkins extends Component {
             <p>My partner wants to learn how o use Jenkins, so I agreed to learn it too.</p>
           </div>
           <div className='panel-footer'>
-            <ProgressBar amount={5} unit='%' />
+            <ProgressBar amount={5} />
           </div>
         </div>
       </article>
