@@ -35,9 +35,11 @@ class GetInTouch extends Component {
                   className='form-control' placeholder='A call is worth 10 e-mails.' />
             </p>
             <p className='input-group'>
+              <label htmlFor='opt-in'>
               <input type='checkbox' name='opt-in' id='opt-in' 
-                  aria-label='Opt-in to have your details stored by me and used to contact you' />
-              <label htmlFor='opt-in'>Do you agree I will store your details and use them to contact you?</label>
+                  aria-label='Opt-in agreement' /> Do you agree 
+                  I will store your details and use them to contact you?
+              </label>
             </p>
 
             <input type='submit' value='Send' title='Call Me Maybe' className='btn btn-primary' disabled />

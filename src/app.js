@@ -6,6 +6,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 // Internal dependencies.
 import Header from './components/nav/header/header';
 import Nav from './components/nav/nav';
+import Footer from './components/footer/footer';
 
 import Projects from './components/projects/projects';
 import GetInTouch from './components/get-in-touch/get-in-touch';
@@ -25,6 +26,7 @@ const App = React.createClass({
           </div>
         </nav>
         {this.props.children}
+        <Footer />
       </div>
     )
   }
