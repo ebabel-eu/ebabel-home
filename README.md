@@ -63,3 +63,5 @@ git push origin master
 - look into ["tree shaking"](https://medium.com/modus-create-front-end-development/webpack-2-tree-shaking-configuration-9f1de90f3233#.ceyvzb1bl) to make the webpack bundle smaller
 - webpack is adding a Hash at every build (see console). Can I use this for cache busting purposes?
 - I'm using the Promise object to async build the projects. This requires a polyfill for IE <= 11 and Android < 4.4.4. See https://github.com/stefanpenner/es6-promise
+- On the layout of my current projects, do something about large gaps that may appear depending on width of the screen of various heights of each project. Maybe a case for Flex?
+- Add editing functionality and use a real web API to get data instead of the current JSON stubs (mu current projects for example).
