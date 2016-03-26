@@ -1,22 +1,54 @@
 import React, { Component } from 'react';
 
 import Header from '../header/header';
-import Pictologo from './pictologo/pictologo';
-import MakingElectronicGadgets from './making-electronic-gadgets/making-electronic-gadgets';
-import LearningArabic from './learning-arabic/learning-arabic';
-import LearningJenkins from './learning-jenkins/learning-jenkins';
-
-//import './projects.scss';
+import Project from './project/project';
+import ProjectsList from './projects-list.js';
 
 class Projects extends Component {
+  constructor() {
+    super();
+
+    // Note: This is the only place where it's ok 
+    // to set the state without using setState.
+    this.state = {
+      projects: []
+    };
+  }
+
+  componentWillMount() {
+    const projectsList = new ProjectsList();
+
+    if (projectsList.areProjectsFound()) {
+      this.setState({
+        projects: projectsList.projects
+      })
+    } else {
+      projectsList.getProjects().then(projects => {
+        this.setState({
+          projects: projects
+        })
+      })
+    }
+  }
+
   render() {
+    const projects = [];
+
+    for(let i = 0, max = this.state.projects.length; i < max; i++) {
+      let project = this.state.projects[i];
+      projects.push(
+        <Project key={i} 
+          title={project.title} 
+          paragraphs={project.paragraphs}
+          progressAmount={project.progressAmount}
+          relatedLinks={project.relatedLinks} />
+      )
+    }
+
     return (
       <article className='row'>
         <Header title='Projects I&apos;m currently working on' />
-        <Pictologo />
-        <MakingElectronicGadgets />
-        <LearningJenkins />
-        <LearningArabic />
+        {projects}
       </article>
     );
   }

@@ -1,0 +1,48 @@
+[
+  {
+    "title": "Rewriting an Android game",
+    "paragraphs": [
+      "I programmed Pictologo, a children's game in Java for Android mobiles. I now want to rewrite this code into a React Native app.",
+      "Thanks to React Native, I will target both the iOS and the Android devices, with a high percentage of code re-use: I'm hoping for more than 90%.",
+      "The app will be performant unlike a Phonegap WebView container that renders an HTML5 app.",
+      "The content of the game is currently hard coded. I want to move this content to a RESTful web API that can be 100% re-used by all platforms (Android, iOS and web)."
+    ],
+    "progressAmount": 30,
+    "relatedLinks": [
+      {
+        "label": "Pictologo app on Android store",
+        "url": "https://play.google.com/store/apps/details?id=nl.websitekrijgen.androidgames.palabras.nl"
+      },
+      {
+        "label": "Java source code on Github",
+        "url": "https://github.com/ebabel-eu/pictologo/blob/master/src/eu/ebabel/pictologo/Pictologo.java"
+      }
+    ]
+  },
+  {
+    "title": "Making electronic gadgets",
+    "paragraphs": [
+      "I've started making electronic gadgets with an Arduino starter kit.",
+      "This is a nice hobby to spend time on and there's a tie-in with web development and processing data in apps.",
+      "Ultimately I would love to build a fully automated system that does something useful, like entertaining my cats when I'm not home."
+    ],
+    "progressAmount": 15
+  },
+  {
+    "title": "Learning Jenkins",
+    "paragraphs": [
+      "I have used Travis and Wercker continuous integration tools in the past.",
+      "My partner wants to learn how o use Jenkins, so I agreed to learn it too."
+    ],
+    "progressAmount": 5
+  },
+  {
+    "title": "Learning Arabic",
+    "paragraphs": [
+      "I was born and grew up in France, but my parents are from Morocco and Algeria.",
+      "They never taught me the Arabic language; learning it is proving more challenging than working out how to use a new Javascript library!",
+      "Still, I will get there; there is no pressure so I'm taking my time with this one."
+    ],
+    "progressAmount": 25
+  }
+]
