@@ -8,7 +8,7 @@ class WhenAmIFree extends Component {
       <article className='row'>
         <Header 
             title='Let&apos;s schedule a call or a meeting' 
-            subtitle='I indicate in my agenda the blocks I&apos;m already booked for.' />
+            subtitle='I indicate in my agenda the blocks I&apos;m already booked for: mostly working at eFocus (my employer) and holidays.' />
       </article>
     );
   }

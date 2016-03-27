@@ -47,7 +47,9 @@ class Projects extends Component {
 
     return (
       <article className='row'>
-        <Header title='Projects I&apos;m currently working on' />
+        <Header 
+            title='Projects I&apos;m currently working on' 
+            subtitle='My current projects at eFocus, my employer, are confidential. However, here&apos;s what I do in my spare time.' />
         {projects}
       </article>
     );
