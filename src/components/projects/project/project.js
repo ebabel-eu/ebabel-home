@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import ProgressBar from '../../progress-bar/progress-bar';
+import './project.scss';
 
 class Project extends Component {
   render() {
@@ -10,17 +11,25 @@ class Project extends Component {
     }
 
     let relatedLinks = [];
+    let relatedLinksContainer = null;
     if (this.props.relatedLinks && this.props.relatedLinks.length > 0) {
       for (let i = 0, max = this.props.relatedLinks.length; i < max; i++) {
         let relatedLink = this.props.relatedLinks[i];
         relatedLinks.push(
-          <li key={i}>
+          <li key={i} className='list-group-item'>
             <a href={relatedLink.url}>
               {relatedLink.label}
             </a>
           </li>
         )
       }
+      relatedLinksContainer = 
+        <div className='ndj-related-links'>
+          <h3 className='h5 ndj-small-title'><strong>More about this project</strong></h3>
+          <ul className='list-group'>
+            {relatedLinks}
+          </ul>
+        </div>
     }
 
     return (
@@ -31,9 +40,10 @@ class Project extends Component {
           </div>
           <div className='panel-body'>
             {paragraphs}
-            <ul>{relatedLinks}</ul>
+            {relatedLinksContainer}
           </div>
           <div className='panel-footer'>
+            <h3 className='h5 ndj-small-title'>Project completion</h3>
             <ProgressBar amount={this.props.progressAmount} />
           </div>
         </div>
