@@ -12,7 +12,6 @@ class Project extends Component {
 
     const relatedLinks = new RelatedLinks(this.props.relatedLinks);
 
-
     return (
       <article className='col-md-4 col-sm-6 ndj-project'>
         <div className='panel panel-default'>
