@@ -11,32 +11,30 @@ class Nav extends Component {
     const currentUrl = window.location.hash.substr(1).split('?')[0];
     const updatePageTitle = new UpdatePageTitle({ currentUrl: currentUrl, links: actions.links });
 
+    const links = actions.links.map((link, i) => {
+      if (currentUrl === link.url) {
+        return (
+          <li key={i} className='active'>
+            <a>
+              {link.label}
+              <span className='sr-only'>(current)</span>
+            </a>
+          </li>
+        )
+      } else {
+        return (
+          <li key={i}>
+            <Link to={link.url}>
+              {link.label}
+            </Link>
+          </li>
+        )
+      }
+    });
+
     return (
       <div className='collapse navbar-collapse' id='bs-navbar'>
-        <ul className='nav navbar-nav'>
-          {
-            actions.links.map((link, i) => {
-              if (currentUrl === link.url) {
-                return (
-                  <li key={i} className='active'>
-                    <a>
-                      {link.label}
-                      <span className='sr-only'>(current)</span>
-                    </a>
-                  </li>
-                )
-              } else {
-                return (
-                  <li key={i}>
-                    <Link to={link.url}>
-                      {link.label}
-                    </Link>
-                  </li>
-                )
-              }
-            })
-          }
-        </ul>
+        <ul className='nav navbar-nav'>{links}</ul>
       </div>
     )
   }

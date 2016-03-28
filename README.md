@@ -58,7 +58,9 @@ git push origin master
 
 ## Todo:
 
-- build app (make a list of issues in Github)
+- nav needs to change to work like project, i.e. localStorage first and the json api call.
+
+- make a list of issues in Github instead of this README todo list
 - setup Jenkins
 - look into ["tree shaking"](https://medium.com/modus-create-front-end-development/webpack-2-tree-shaking-configuration-9f1de90f3233#.ceyvzb1bl) to make the webpack bundle smaller
 - webpack is adding a Hash at every build (see console). Can I use this for cache busting purposes?

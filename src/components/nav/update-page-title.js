@@ -1,5 +1,4 @@
 class UpdatePageTitle {
-
   constructor(input) {
     if (!input || !input.currentUrl || !input.links) {
       throw new Error('UpdatePageTitle is missing input.');
