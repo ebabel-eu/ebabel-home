@@ -15,20 +15,27 @@ class Projects extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const projectsList = new ProjectsList();
 
+    // Try to get the projects from localStorage (fastest method),
+    // then update the state to get them displayed.
     if (projectsList.areProjectsFound()) {
       this.setState({
         projects: projectsList.projects
       })
-    } else {
-      projectsList.getProjects().then(projects => {
-        this.setState({
-          projects: projects
-        })
-      })
     }
+
+    // Regardless of whether projects were found in localStorage,
+    // now get the latest version from the web API, in case there is any update.
+    // This makes sense because first projects are fetched from localStorage (if any),
+    // they get rendered to the screen, and finally, while the user can read projects already,
+    // an async call is made to get the latest from the web API over the network.
+    projectsList.getProjects().then(projects => {
+      this.setState({
+        projects: projects
+      })
+    })
   }
 
   render() {
