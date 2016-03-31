@@ -1,9 +1,5 @@
 class UpdatePageTitle {
-  constructor(input) {
-    if (!input || !input.currentUrl || !input.links) {
-      throw new Error('UpdatePageTitle is missing input.');
-    }
-
+  constructor(input = { currentUrl: null, links: [] }) {
     const currentUrl = input.currentUrl;
     const links = input.links;
     const currentLink = links.find(link => {

@@ -1,7 +1,7 @@
 import React from 'react';
 
 class RelatedLinks {
-  constructor(input) {
+  constructor(input = []) {
     this.input = input;
   }
 
