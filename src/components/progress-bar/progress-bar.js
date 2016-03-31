@@ -5,7 +5,7 @@ import './progress-bar.scss';
 class ProgressBar extends Component {
   render() {
     const styles = {
-      width: [this.props.amount, '%'].join('')
+      width: `${this.props.amount}%`
     };
 
     return (
