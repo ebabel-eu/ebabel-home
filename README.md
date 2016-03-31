@@ -14,6 +14,13 @@ npm install webpack -g
 npm install http-server -g
 ```
 
+To test against npm unpublished packages, install snyk and run the following command.
+
+```
+npm install snyk -g
+snyk test-unpublished
+```
+
 ### Build continuously during development
 
 ```

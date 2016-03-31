@@ -14,3 +14,4 @@ build/*.ttf
 build/*.svg
 coverage
 .nyc_output
+*.log
