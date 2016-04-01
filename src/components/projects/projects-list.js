@@ -24,7 +24,7 @@ class ProjectsList {
   getProjects() {
     return new Promise((resolve, reject) => {
       $.ajax({
-        url: '/json/projects.json',
+        url: '/json/projectsx.json',
         method: 'GET'
       })
       .done(response => {
@@ -33,14 +33,21 @@ class ProjectsList {
         this.storeProjects(response);
       })
       .fail((jqXHR, textStatus, errorThrown) => {
-        const error = jqXHR.error();
+        const _error = jqXHR.error();
+        let errorMessage;
 
-        switch (error.status) {
+        switch (_error.status) {
           case 404:
-            reject(ERR_API_NOT_FOUND);
+            errorMessage = ERR_API_NOT_FOUND;
+            break;
           default:
-            reject(ERR_UNEXPECTED);
+            errorMessage = ERR_UNEXPECTED;
+            break;
         }
+
+        const error = new Error(errorMessage);
+
+        reject(error);
       });
     })
   }
