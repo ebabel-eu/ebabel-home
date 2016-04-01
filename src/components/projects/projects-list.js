@@ -24,7 +24,7 @@ class ProjectsList {
   getProjects() {
     return new Promise((resolve, reject) => {
       $.ajax({
-        url: '/json/projectsx.json',
+        url: '/json/projects.json',
         method: 'GET'
       })
       .done(response => {
