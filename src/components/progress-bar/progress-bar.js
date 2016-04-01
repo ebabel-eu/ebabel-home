@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
+import {PERCENT} from '../../constants.js';
 import './progress-bar.scss';
 
 class ProgressBar extends Component {
   render() {
     const styles = {
-      width: `${this.props.amount}%`
+      width: `${this.props.amount}${PERCENT}`
     };
 
     return (
@@ -24,7 +25,7 @@ class ProgressBar extends Component {
 }
 
 ProgressBar.defaultProps = {
-  unit: '%'
+  unit: PERCENT
 }
 
 ProgressBar.propTypes = {
