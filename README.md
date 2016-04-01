@@ -10,8 +10,10 @@ If you have a new machine and have never used some of these tools, see further i
 
 ```
 npm install
-npm install webpack -g
-npm install http-server -g
+npm install -g webpack
+npm install -g http-server
+npm install -g eslint
+npm install -g jshint
 ```
 
 To test against npm unpublished packages, install snyk and run the following command.
