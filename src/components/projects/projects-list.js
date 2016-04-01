@@ -1,3 +1,5 @@
+'use strict';
+
 import { ERR_API_NOT_FOUND, ERR_UNEXPECTED } from '../../constants.js';
 
 // List the projects I'm currently working on.
