@@ -31,11 +31,16 @@ class Projects extends Component {
     // This makes sense because first projects are fetched from localStorage (if any),
     // they get rendered to the screen, and finally, while the user can read projects already,
     // an async call is made to get the latest from the web API over the network.
-    projectsList.getProjects().then(projects => {
-      this.setState({
-        projects: projects
+    projectsList.getProjects()
+      .then(projects => {
+        this.setState({
+          projects: projects
+        })
       })
-    })
+      .catch(error => {
+        // todo: display error message to screen using a toast style message.
+        throw new Error(error);
+      })
   }
 
   render() {

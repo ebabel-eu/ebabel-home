@@ -1,3 +1,5 @@
+import { ERR_API_NOT_FOUND, ERR_UNEXPECTED } from '../../constants.js';
+
 // List the projects I'm currently working on.
 class ProjectsList {
 
@@ -28,10 +30,15 @@ class ProjectsList {
         resolve(response);
         this.storeProjects(response);
       })
-      .fail(error => {
-        reject(error);
-        // todo: display error message to screen using a toast style message.
-        throw new Error(error);
+      .fail((jqXHR, textStatus, errorThrown) => {
+        const error = jqXHR.error();
+
+        switch (error.status) {
+          case 404:
+            reject(ERR_API_NOT_FOUND);
+          default:
+            reject(ERR_UNEXPECTED);
+        }
       });
     })
   }
