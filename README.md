@@ -23,6 +23,18 @@ npm install snyk -g
 snyk test-unpublished
 ```
 
+### Linting
+
+In visual studio code, install eslint, jshint and wallaby:
+
+F1 on Windows, ext install, then:
+
+- ext install eslint
+- ext install jshint
+- ext install wallaby
+
+Visual Studio code will need to restart.
+
 ### Build continuously during development
 
 ```
