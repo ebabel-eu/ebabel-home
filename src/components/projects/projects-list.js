@@ -27,28 +27,28 @@ class ProjectsList {
         url: '/json/projects.json',
         method: 'GET'
       })
-      .done(response => {
-        this.projects = response;
-        resolve(response);
-        this.storeProjects(response);
-      })
-      .fail((jqXHR, textStatus, errorThrown) => {
-        const _error = jqXHR.error();
-        let errorMessage;
+        .done(response => {
+          this.projects = response;
+          resolve(response);
+          this.storeProjects(response);
+        })
+        .fail((jqXHR, textStatus, errorThrown) => {
+          const _error = jqXHR.error();
+          let errorMessage;
 
-        switch (_error.status) {
-          case 404:
-            errorMessage = ERR_API_NOT_FOUND;
-            break;
-          default:
-            errorMessage = ERR_UNEXPECTED;
-            break;
-        }
+          switch (_error.status) {
+            case 404:
+              errorMessage = ERR_API_NOT_FOUND;
+              break;
+            default:
+              errorMessage = ERR_UNEXPECTED;
+              break;
+          }
 
-        const error = new Error(errorMessage);
+          const error = new Error(errorMessage);
 
-        reject(error);
-      });
+          reject(error);
+        });
     })
   }
 }
