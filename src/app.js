@@ -1,7 +1,7 @@
 // React
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
 // Internal dependencies.
 import Header from './components/nav/header/header';
@@ -30,9 +30,9 @@ const App = React.createClass({
         {this.props.children}
         <Footer />
       </div>
-    )
+    );
   }
-})
+});
 
 render((
   <Router history={hashHistory}>
@@ -45,4 +45,4 @@ render((
       <Route path='hire-me' component={HireMe} />
     </Route>
   </Router>
-), document.getElementById('root'))
+), document.getElementById('root'));

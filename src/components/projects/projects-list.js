@@ -1,5 +1,3 @@
-'use strict';
-
 import { ERR_API_NOT_FOUND, ERR_UNEXPECTED } from '../../constants.js';
 
 // List the projects I'm currently working on.
@@ -37,19 +35,19 @@ class ProjectsList {
           let errorMessage;
 
           switch (_error.status) {
-            case 404:
-              errorMessage = ERR_API_NOT_FOUND;
-              break;
-            default:
-              errorMessage = ERR_UNEXPECTED;
-              break;
+          case 404:
+            errorMessage = ERR_API_NOT_FOUND;
+            break;
+          default:
+            errorMessage = ERR_UNEXPECTED;
+            break;
           }
 
           const error = new Error(errorMessage);
 
           reject(error);
         });
-    })
+    });
   }
 }
 

@@ -2,14 +2,14 @@ class Actions {
 
   constructor(links = null) {
     this.links = links || 
-      localStorage['links'] && JSON.parse(localStorage['links']) || 
+      localStorage.getItem('links') && JSON.parse(localStorage.getItem('links')) || 
       this.defaultLinks();
 
     this.storeLinks();
   }
 
   storeLinks() {
-    localStorage['links'] = JSON.stringify(this.links);
+    localStorage.setItem('links', JSON.stringify(this.links));
   }
 
   defaultLinks() {

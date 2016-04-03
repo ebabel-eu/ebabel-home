@@ -23,7 +23,7 @@ class Projects extends Component {
     if (projectsList.areProjectsFound()) {
       this.setState({
         projects: projectsList.projects
-      })
+      });
     }
 
     // Regardless of whether projects were found in localStorage,
@@ -35,12 +35,12 @@ class Projects extends Component {
       .then(projects => {
         this.setState({
           projects: projects
-        })
+        });
       })
       .catch(error => {
         // todo: display error message to screen using a toast style message.
         throw new Error(error);
-      })
+      });
   }
 
   render() {
@@ -54,7 +54,7 @@ class Projects extends Component {
           paragraphs={project.paragraphs}
           progressAmount={project.progressAmount}
           relatedLinks={project.relatedLinks} />
-      )
+      );
     }
 
     return (
