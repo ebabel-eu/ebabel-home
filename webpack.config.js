@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -7,7 +6,7 @@ module.exports = {
   },
   devtool: 'source-map',
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(path.dirname(), 'build'),
     filename: '[name].js'
   },
   resolve: {

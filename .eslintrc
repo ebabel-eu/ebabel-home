@@ -1,9 +1,11 @@
+// Configuration: http://eslint.org/docs/user-guide/configuring
 {
   "env": {
     "browser": true,
     "es6": true,
     "jquery": true,
-    "mocha": true
+    "mocha": true,
+    "commonjs": true
   },
   "parser": "babel-eslint",
   "parserOptions": {
