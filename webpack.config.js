@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'bundle': './src/app'
+    'bundle': './src'
   },
   devtool: 'source-map',
   output: {

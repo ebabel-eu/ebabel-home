@@ -1,42 +1,15 @@
 // React
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
-// Internal dependencies.
-import Header from './components/nav/header/header';
-import Nav from './components/nav/nav';
-import Footer from './components/footer/footer';
-
+import App from './components/app/app';
 import Projects from './components/projects/projects';
 import Portfolio from './components/portfolio/portfolio';
 import Interview from './components/interview/interview';
 import GetInTouch from './components/get-in-touch/get-in-touch';
 import WhenAmIFree from './components/when-am-i-free/when-am-i-free';
 import HireMe from './components/hire-me/hire-me';
-
-import './app.scss';
-
-export default class App extends Component {
-  render() {
-    return (
-      <div className='container'>
-        <nav className='navbar navbar-default'>
-          <div className='container-fluid'>
-            <Header />
-            <Nav />
-          </div>
-        </nav>
-        {this.props.children}
-        <Footer />
-      </div>
-    );
-  }
-}
-
-App.propTypes = {
-  children: React.PropTypes.object
-}
 
 render((
   <Router history={hashHistory}>
