@@ -13,7 +13,6 @@ npm install
 npm install -g webpack
 npm install -g http-server
 npm install -g eslint
-npm install -g jshint
 ```
 
 To test against npm unpublished packages, install snyk and run the following command.
@@ -30,7 +29,6 @@ In visual studio code, install eslint, jshint and wallaby:
 F1 on Windows, ext install, then:
 
 - ext install eslint
-- ext install jshint
 - ext install wallaby
 
 Visual Studio code will need to restart.
