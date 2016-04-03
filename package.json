@@ -32,7 +32,6 @@
     "eslint-plugin-react": "4.2.3",
     "imports-loader": "0.6.5",
     "istanbul": "0.4.2",
-    "jshint": "2.9.1",
     "left-pad": "github:azer/left-pad",
     "mocha": "2.4.5",
     "node-sass": "3.4.2",

@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router'
 
 import Actions from './actions';
-import UpdatePageTitle from './update-page-title.js';
+import PageTitle from './page-title.js';
 
 const actions = new Actions();
 
 class Nav extends Component {
   render() {
     const currentUrl = window.location.hash.substr(1).split('?')[0];
-    const updatePageTitle = new UpdatePageTitle({ currentUrl: currentUrl, links: actions.links });
+    const pageTitle = new PageTitle({ currentUrl: currentUrl, links: actions.links });
+
+    pageTitle.update();
 
     const links = actions.links.map((link, i) => {
       if (currentUrl === link.url) {
