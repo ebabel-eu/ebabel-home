@@ -1,7 +1,8 @@
 'use strict';
 
-var wallabyWebpack = require('wallaby-webpack');
-var webpackPostprocessor = wallabyWebpack({});
+const webpackConfig = require('./webpack.config');
+const wallabyWebpack = require('wallaby-webpack');
+const webpackPostprocessor = wallabyWebpack(webpackConfig);
 
 module.exports = function (wallaby) {
 
@@ -11,7 +12,7 @@ module.exports = function (wallaby) {
     ],
 
     tests: [
-      { pattern: 'src/**/*.test.js', load: false }
+      { pattern: 'src/**/*test.js', load: false }
     ],
 
     compilers: {
