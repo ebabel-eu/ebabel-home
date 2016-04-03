@@ -6,7 +6,7 @@ import PageTitle from './page-title.js';
 
 const actions = new Actions();
 
-class Nav extends Component {
+export default class Nav extends Component {
   render() {
     const currentUrl = window.location.hash.substr(1).split('?')[0];
     const pageTitle = new PageTitle({ currentUrl: currentUrl, links: actions.links });
@@ -19,7 +19,7 @@ class Nav extends Component {
           <li key={i} className='active'>
             <a>
               {link.label}
-              <span className='sr-only'>(current)</span>
+              <span className='sr-only'> (current) </span>
             </a>
           </li>
         )
@@ -41,5 +41,3 @@ class Nav extends Component {
     )
   }
 }
-
-export default Nav;

@@ -1,7 +1,7 @@
 import { ERR_API_NOT_FOUND, ERR_UNEXPECTED } from '../../constants.js';
 
 // List the projects I'm currently working on.
-class ProjectsList {
+export default class ProjectsList {
 
   // Get projects from localStorage first (if any).
   constructor() {
@@ -30,17 +30,17 @@ class ProjectsList {
           resolve(response);
           this.storeProjects(response);
         })
-        .fail((jqXHR, textStatus, errorThrown) => {
+        .fail((jqXHR) => {
           const _error = jqXHR.error();
           let errorMessage;
 
           switch (_error.status) {
-          case 404:
-            errorMessage = ERR_API_NOT_FOUND;
-            break;
-          default:
-            errorMessage = ERR_UNEXPECTED;
-            break;
+            case 404:
+              errorMessage = ERR_API_NOT_FOUND;
+              break;
+            default:
+              errorMessage = ERR_UNEXPECTED;
+              break;
           }
 
           const error = new Error(errorMessage);
@@ -50,5 +50,3 @@ class ProjectsList {
     });
   }
 }
-
-export default ProjectsList;

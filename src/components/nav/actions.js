@@ -1,8 +1,7 @@
-class Actions {
-
+export default class Actions {
   constructor(links = null) {
-    this.links = links || 
-      localStorage['links'] && JSON.parse(localStorage['links']) || 
+    this.links = links ||
+      localStorage['links'] && JSON.parse(localStorage['links']) ||
       this.defaultLinks();
 
     this.storeLinks();
@@ -24,7 +23,4 @@ class Actions {
 
     return links;
   }
-
 }
-
-export default Actions;

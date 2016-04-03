@@ -4,7 +4,7 @@ import ProgressBar from '../../progress-bar/progress-bar';
 import RelatedLinks from './related-links.js';
 import './project.scss';
 
-class Project extends Component {
+export default class Project extends Component {
   render() {
     const paragraphs = this.props.paragraphs.map((paragraph, i) => {
       return <p key={i}>{paragraph}</p>
@@ -20,7 +20,7 @@ class Project extends Component {
           </div>
           <div className='panel-body'>
             {paragraphs}
-            {relatedLinks.links()}
+            {relatedLinks.links() }
           </div>
           <div className='panel-footer'>
             <h3 className='h5 ndj-small-title'>Project completion</h3>
@@ -42,5 +42,3 @@ Project.propTypes = {
   progressAmount: React.PropTypes.number.isRequired,
   relatedLinks: React.PropTypes.array
 }
-
-export default Project;

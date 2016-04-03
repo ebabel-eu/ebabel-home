@@ -1,6 +1,6 @@
 import React from 'react';
 
-class RelatedLinks {
+export default class RelatedLinks {
   constructor(input = []) {
     this.input = input;
   }
@@ -21,7 +21,7 @@ class RelatedLinks {
       })
 
       if (relatedLinks && relatedLinks.length > 0) {
-        relatedLinksContainer = 
+        relatedLinksContainer =
           <div className='ndj-related-links'>
             <h3 className='h5 ndj-small-title'><strong>More about this project</strong></h3>
             <ul className='list-group'>
@@ -34,5 +34,3 @@ class RelatedLinks {
     return relatedLinksContainer;
   }
 }
-
-export default RelatedLinks;

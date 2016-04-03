@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 import './header.scss';
 
-class Header extends Component {
+export default class Header extends Component {
   render() {
     let subtitleContainer = null;
 
     if (this.props.subtitle) {
-      subtitleContainer = 
-          <small>{this.props.subtitle}</small>
+      subtitleContainer =
+        <small>{this.props.subtitle}</small>
     }
 
     return (
@@ -25,5 +25,3 @@ Header.propTypes = {
   title: React.PropTypes.string.isRequired,
   subtitle: React.PropTypes.string
 }
-
-export default Header;

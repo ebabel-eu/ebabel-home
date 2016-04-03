@@ -1,5 +1,5 @@
 // React
-import React from 'react';
+import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
@@ -17,7 +17,7 @@ import HireMe from './components/hire-me/hire-me';
 
 import './app.scss';
 
-const App = React.createClass({
+export default class App extends Component {
   render() {
     return (
       <div className='container'>
@@ -32,7 +32,11 @@ const App = React.createClass({
       </div>
     );
   }
-});
+}
+
+App.propTypes = {
+  children: React.PropTypes.object
+}
 
 render((
   <Router history={hashHistory}>
