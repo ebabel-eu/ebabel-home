@@ -1,22 +1,19 @@
-'use strict';
-
-const webpackConfig = require('./webpack.config');
 const wallabyWebpack = require('wallaby-webpack');
-const webpackPostprocessor = wallabyWebpack(webpackConfig);
+const webpackPostprocessor = wallabyWebpack({});
 
 module.exports = function (wallaby) {
 
   return {
     files: [
-      { pattern: 'src/**/*.js', load: false }
+      { pattern: '!src/**/*.spec.js', load: false }
     ],
 
     tests: [
-      { pattern: 'src/**/*test.js', load: false }
+      { pattern: 'src/**/*.spec.js', load: false }
     ],
 
     compilers: {
-      '**/*.js': wallaby.compilers.babel()
+      'src/**/*.js': wallaby.compilers.babel()
     },
 
     postprocessor: webpackPostprocessor,

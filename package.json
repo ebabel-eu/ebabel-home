@@ -3,8 +3,8 @@
   "version": "2.0.0",
   "description": "Web application tool to communicate what I'm working on, get in touch, schedule meetings with me and possibly hire me.",
   "scripts": {
-    "test": "nyc --reporter=lcov --require babel-core/register mocha ./src/**/*.test.js --compilers js:babel-register",
-    "watch": "nyc --reporter=lcov --require babel-core/register mocha -w ./src/**/*.test.js --compilers js:babel-register"
+    "test": "nyc --reporter=lcov --require babel-core/register mocha ./src/**/*.spec.js --compilers js:babel-register",
+    "watch": "nyc --reporter=lcov --require babel-core/register mocha -w ./src/**/*.spec.js --compilers js:babel-register"
   },
   "repository": {
     "type": "git",
