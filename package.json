@@ -3,8 +3,8 @@
   "version": "2.0.0",
   "description": "Web application tool to communicate what I'm working on, get in touch, schedule meetings with me and possibly hire me.",
   "scripts": {
-    "test": "nyc --reporter=lcov --require babel-core/register mocha ./src/**/*.spec.js --compilers js:babel-register",
-    "watch": "nyc --reporter=lcov --require babel-core/register mocha -w ./src/**/*.spec.js --compilers js:babel-register"
+    "test": "karma start --single-run",
+    "test-watch": "karma start"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "chai-as-promised": "5.2.0",
     "css-loader": "0.23.1",
     "eslint": "2.6.0",
-    "eslint-config-airbnb": "^6.2.0",
+    "eslint-config-airbnb": "6.2.0",
     "eslint-plugin-react": "4.2.3",
     "imports-loader": "0.6.5",
     "istanbul": "0.4.2",
