@@ -1,14 +1,14 @@
 export default class Actions {
   constructor(links = null) {
     this.links = links ||
-      localStorage['links'] && JSON.parse(localStorage['links']) ||
+      localStorage.links && JSON.parse(localStorage.links) ||
       this.defaultLinks();
 
     this.storeLinks();
   }
 
   storeLinks() {
-    localStorage['links'] = JSON.stringify(this.links);
+    localStorage.links = JSON.stringify(this.links);
   }
 
   defaultLinks() {
@@ -18,7 +18,7 @@ export default class Actions {
       { label: 'Interview', url: '/interview' },
       { label: 'Get in touch', url: '/get-in-touch' },
       { label: 'When am I free', url: '/when-am-i-free' },
-      { label: 'Hire me', url: '/hire-me' }
+      { label: 'Hire me', url: '/hire-me' },
     ];
 
     return links;

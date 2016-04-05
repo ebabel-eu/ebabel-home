@@ -1,5 +1,5 @@
 // React
-import React, { Component } from 'react';
+import React from 'react';
 
 // Internal dependencies.
 import Header from '../nav/header/header';
@@ -8,23 +8,21 @@ import Footer from '../footer/footer';
 
 require('./app.css');
 
-export default class App extends Component {
-  render() {
-    return (
-      <div className='container'>
-        <nav className='navbar navbar-default'>
-          <div className='container-fluid'>
-            <Header />
-            <Nav />
-          </div>
-        </nav>
-        {this.props.children}
-        <Footer />
-      </div>
-    );
-  }
+export default function App() {
+  return (
+    <div className="container">
+      <nav className="navbar navbar-default">
+        <div className="container-fluid">
+          <Header />
+          <Nav />
+        </div>
+      </nav>
+      {this.props.children}
+      <Footer />
+    </div>
+  );
 }
 
 App.propTypes = {
-  children: React.PropTypes.object
+  children: React.PropTypes.object,
 };
