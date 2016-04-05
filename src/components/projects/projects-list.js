@@ -5,7 +5,7 @@ export default class ProjectsList {
 
   // Get projects from localStorage first (if any).
   constructor() {
-    this.projects = localStorage['projects'] && JSON.parse(localStorage['projects']) || [];
+    this.projects = localStorage.projects && JSON.parse(localStorage.projects) || [];
   }
 
   areProjectsFound() {
@@ -14,7 +14,7 @@ export default class ProjectsList {
 
   // Persist projects into localStorage for future fast loading.
   storeProjects(projects) {
-    localStorage['projects'] = JSON.stringify(projects);
+    localStorage.projects = JSON.stringify(projects);
   }
 
   // Make an Ajax call to get projects data.
@@ -23,7 +23,7 @@ export default class ProjectsList {
     return new Promise((resolve, reject) => {
       $.ajax({
         url: '/json/projects.json',
-        method: 'GET'
+        method: 'GET',
       })
         .done(response => {
           this.projects = response;

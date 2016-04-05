@@ -8,10 +8,10 @@ export default class Projects extends Component {
   constructor() {
     super();
 
-    // Note: This is the only place where it's ok 
+    // Note: This is the only place where it's ok
     // to set the state without using setState.
     this.state = {
-      projects: []
+      projects: [],
     };
   }
 
@@ -22,7 +22,7 @@ export default class Projects extends Component {
     // then update the state to get them displayed.
     if (projectsList.areProjectsFound()) {
       this.setState({
-        projects: projectsList.projects
+        projects: projectsList.projects,
       });
     }
 
@@ -34,7 +34,7 @@ export default class Projects extends Component {
     projectsList.getProjects()
       .then(projects => {
         this.setState({
-          projects: projects
+          projects: projects,
         });
       })
       .catch(error => {
@@ -47,21 +47,23 @@ export default class Projects extends Component {
     const projects = [];
 
     for (let i = 0, max = this.state.projects.length; i < max; i++) {
-      let project = this.state.projects[i];
+      const project = this.state.projects[i];
       projects.push(
         <Project key={i}
           title={project.title}
           paragraphs={project.paragraphs}
           progressAmount={project.progressAmount}
-          relatedLinks={project.relatedLinks} />
+          relatedLinks={project.relatedLinks}
+        />
       );
     }
 
     return (
-      <article className='row'>
+      <article className="row">
         <Header
-          title='Projects I&apos;m currently working on'
-          subtitle='My current projects at eFocus, my employer, are confidential. However, here&apos;s what I do in my spare time.' />
+          title="Projects I&apos;m currently working on"
+          subtitle="My current projects at eFocus, my employer, are confidential. However, here&apos;s what I do in my spare time."
+        />
         {projects}
       </article>
     );
