@@ -1,5 +1,5 @@
 // Single place to define all constants of this application.
-// to import such a constant: 
+// to import such a constant:
 // import { PERCENT, ERR_API_NOT_FOUND } from '../../constants.js';
 
 export const PERCENT = '%';

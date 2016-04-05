@@ -13,13 +13,13 @@ import HireMe from './components/hire-me/hire-me';
 
 render((
   <Router history={hashHistory}>
-    <Route path='/' component={App}>
+    <Route path="/" component={App}>
       <IndexRoute component={Projects} />
-      <Route path='portfolio' component={Portfolio} />
-      <Route path='interview' component={Interview} />
-      <Route path='get-in-touch' component={GetInTouch} />
-      <Route path='when-am-i-free' component={WhenAmIFree} />
-      <Route path='hire-me' component={HireMe} />
+      <Route path="portfolio" component={Portfolio} />
+      <Route path="interview" component={Interview} />
+      <Route path="get-in-touch" component={GetInTouch} />
+      <Route path="when-am-i-free" component={WhenAmIFree} />
+      <Route path="hire-me" component={HireMe} />
     </Route>
   </Router>
 ), document.getElementById('root'));
