@@ -6,7 +6,7 @@ import Header from '../nav/header/header';
 import Nav from '../nav/nav';
 import Footer from '../footer/footer';
 
-import './app.scss';
+require('./app.css');
 
 export default class App extends Component {
   render() {

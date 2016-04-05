@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import ProgressBar from '../../progress-bar/progress-bar';
 import RelatedLinks from './related-links.js';
-import './project.scss';
+require('./project.css');
 
 export default class Project extends Component {
   render() {

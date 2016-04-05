@@ -3,7 +3,7 @@ var wallabyPostprocessor = wallabyWebpack({
   // webpack options, such as
   module: {
     loaders: [
-      { test: /\.js$/, exclude: [/node_modules/], loader: 'babel?presets[]=es2015' },
+      { test: /\.js$/, exclude: [/build/, /node_modules/], loader: 'babel?presets[]=es2015' },
       { test: /\.html$/, loader: 'raw' },
     ],
   },
@@ -13,12 +13,12 @@ var wallabyPostprocessor = wallabyWebpack({
 module.exports = function() {
   return {
     files: [
-      { pattern: 'src/app/**/*.js', load: false },
-      { pattern: '!src/app/**/*.spec.js', load: false },
+      { pattern: 'src/**/*.js', load: false },
+      { pattern: '!src/**/*.spec.js', load: false },
     ],
 
     tests: [
-      { pattern: 'src/app/**/*.spec.js', load: false },
+      { pattern: 'src/**/*.spec.js', load: false },
     ],
 
     setup: function () {

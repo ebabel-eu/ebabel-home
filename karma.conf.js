@@ -11,8 +11,9 @@ module.exports = function karmaConf(config) {
     webpack: {
       module: {
         loaders: [
-          { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'babel?presets[]=es2015' },
+          { test: /\.js$/, exclude: [/build/, /node_modules/], loader: 'babel?presets[]=es2015' },
           { test: /\.html$/, loader: 'raw' },
+          { test: /\.styl$/, loaders: ['style-loader', 'css-loader'] },
         ],
       },
       watch: false,
