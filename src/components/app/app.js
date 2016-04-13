@@ -6,7 +6,7 @@ import Header from '../nav/header/header';
 import Nav from '../nav/nav';
 import Footer from '../footer/footer';
 
-require('./app.css');
+// require('./app.css');
 
 export default function App() {
   return (

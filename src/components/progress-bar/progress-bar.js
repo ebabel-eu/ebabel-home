@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import { PERCENT } from '../../constants.js';
-require('./progress-bar.css');
+
+// require('./progress-bar.css');
 
 export default class ProgressBar extends Component {
   render() {
